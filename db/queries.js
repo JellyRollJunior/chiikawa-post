@@ -23,4 +23,14 @@ const getUserById = databaseHandler(async (id) => {
     return rows[0];
 }, 'Error retrieving user');
 
-export { getUserByUsername, getUserById };
+const insertuser = databaseHandler(async (firstname, lastname, username, password) => {
+    const query = `
+        INSERT INTO users (firstname, lastname, username, password)
+        VALUES ($1, $2, $3, $4)
+        RETURNING *
+    `;
+    const { rows } = await pool.query(query, [firstname, lastname, username, password]);
+    console.log(`${rows[0].username} inserted into database`);
+}, 'Error inserting user');
+
+export { getUserByUsername, getUserById, insertuser };
