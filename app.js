@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import path from 'node:path';
+import { authRouter } from './routes/authRouter.js';
 
 // setup
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(express.static(assetsPath));
 app.get('/', (req, res) => {
     res.send('hello!');
 });
+app.use('/auth', authRouter);
 
 // init server
 const PORT = 3000;
