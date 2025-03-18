@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
     firstname VARCHAR (32),
     lastname VARCHAR (32),
     username VARCHAR (32),
-    password VARCHAR,
+    password VARCHAR (64),
     isAdmin boolean DEFAULT false
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS messages (
     title VARCHAR (64),
     message text,
     timestamp DATE DEFAULT CURRENT_DATE, 
-    author_id INTEGER REFERENCES users (id) ON DELETE CASCADE,
+    author_id INTEGER REFERENCES users (id) ON DELETE CASCADE
 );
 
 -- INSERT USERS
