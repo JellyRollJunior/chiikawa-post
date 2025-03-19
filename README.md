@@ -14,6 +14,5 @@
 
 
 TODO
-- confirm password input
 - display signup errors
 - encrypt passwords
