@@ -3,14 +3,14 @@ import * as db from '../db/queries.js';
 import { validationResult } from 'express-validator';
 
 const getSignUp = (req, res) => {
-    res.render('auth/signUpForm');
+    res.render('signUpForm');
 };
 
 const postSignUp = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         console.log(errors);
-        res.redirect('/auth/sign-up');
+        res.redirect('/sign-up');
         return;
     }
     const firstname = req.body.firstname;

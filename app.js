@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import path from 'node:path';
-import { authRouter } from './routes/authRouter.js';
+import { signUpRouter } from './routes/signUpRouter.js';
 dotenv.config();
 
 const app = express();
@@ -19,7 +19,7 @@ app.use(express.static(assetsPath));
 app.get('/', (req, res) => {
     res.send('hello!');
 });
-app.use('/auth', authRouter);
+app.use('/sign-up', signUpRouter);
 
 // init server
 const PORT = 3000;

@@ -15,4 +15,3 @@
 
 TODO
 - display signup errors
-- remove /auth
