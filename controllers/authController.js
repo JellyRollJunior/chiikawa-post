@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs';
 import * as db from '../db/queries.js';
 import { validationResult } from 'express-validator';
 
@@ -16,7 +17,9 @@ const postSignUp = async (req, res) => {
     const lastname = req.body.lastname;
     const username = req.body.username;
     const password = req.body.password;
-    await db.insertuser(firstname, lastname, username, password);
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+    await db.insertuser(firstname, lastname, username, hashedPassword);
     res.redirect('/');
 };
 

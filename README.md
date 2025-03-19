@@ -10,9 +10,9 @@
 -   passport
 -   passport-local
 -   connect-pg-simple
-
+-   bcryptjs
 
 
 TODO
 - display signup errors
-- encrypt passwords
+- remove /auth
