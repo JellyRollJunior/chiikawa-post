@@ -10,3 +10,10 @@
 -   passport
 -   passport-local
 -   connect-pg-simple
+
+
+
+TODO
+- password validation
+- confirm password input
+- display signup errors
