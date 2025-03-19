@@ -11,7 +11,3 @@
 -   passport-local
 -   connect-pg-simple
 -   bcryptjs
-
-
-TODO
-- display signup errors

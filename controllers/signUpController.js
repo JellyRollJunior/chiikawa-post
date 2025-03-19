@@ -10,7 +10,7 @@ const postSignUp = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         console.log(errors);
-        res.redirect('/sign-up');
+        res.status(401).render('signUpForm', { errors: errors.array() });
         return;
     }
     const firstname = req.body.firstname;
