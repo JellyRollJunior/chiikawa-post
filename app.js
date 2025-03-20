@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'node:path';
 import { signUpRouter } from './routes/signUpRouter.js';
+import { loginRouter } from './routes/loginRouter.js';
 dotenv.config();
 
 const app = express();
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
     res.send('hello!');
 });
 app.use('/sign-up', signUpRouter);
+app.use('/login', loginRouter);
 
 // init server
 const PORT = 3000;
