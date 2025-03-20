@@ -14,5 +14,4 @@
 
 todo:
 - login form validation
-- login error display
 - connect-pg-simple
