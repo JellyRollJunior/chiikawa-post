@@ -16,8 +16,5 @@ todo:
 - login form
 - login form validation
 - login error display
-- get login
-- post login
-- login route render
-- hello (user) on index page
 - passport config
+- connect-pg-simple

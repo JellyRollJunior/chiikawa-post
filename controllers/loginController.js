@@ -1,5 +1,12 @@
+import passport from 'passport';
+
 const getLogin = (req, res) => {
     res.render('loginForm');
 };
 
-export { getLogin };
+const postLogin = passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/',
+});
+
+export { getLogin, postLogin };
