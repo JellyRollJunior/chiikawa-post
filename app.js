@@ -2,10 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'node:path';
 import session from 'express-session';
-import passport from 'passport';
-import passportLocal from 'passport-local';
-import bcrypt from 'bcryptjs';
-import * as db from './db/queries.js';
+import { passport, addCurrentUserToLocals } from './config/passport.js';
 import { signUpRouter } from './routes/signUpRouter.js';
 import { loginRouter } from './routes/loginRouter.js';
 dotenv.config();
@@ -24,32 +21,7 @@ app.use(express.static(assetsPath));
 // passport
 app.use(session({ secret: 'cats', resave: false, saveUninitialized: false }));
 app.use(passport.session());
-// LocalStrategy
-const LocalStrategy = passportLocal.Strategy;
-const local = new LocalStrategy(async (username, password, done) => {
-    const user = await db.getUserByUsername(username);
-    if (!user) {
-        return done(null, false, { message: 'Incorrect username' });
-    }
-    const match = await bcrypt.compare(password, user.password);
-    if (!match) {
-        return done(null, false, { message: 'Incorrect password' });
-    }
-    return done(null, user);
-});
-passport.use(local);
-passport.serializeUser((user, done) => {
-    done(null, user.id);
-});
-passport.deserializeUser(async (id, done) => {
-    const user = await db.getUserById(id);
-    !user ? done(new Error('User could not be found')) : done(null, user);
-});
-// add to user
-app.use((req, res, next) => {
-    res.locals.currentUser = req.user;
-    next();
-});
+app.use(addCurrentUserToLocals);
 
 // routes
 app.get('/', (req, res) => {

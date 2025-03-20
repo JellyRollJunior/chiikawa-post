@@ -13,8 +13,6 @@
 -   bcryptjs
 
 todo:
-- login form
 - login form validation
 - login error display
-- passport config
 - connect-pg-simple
