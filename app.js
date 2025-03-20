@@ -2,6 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'node:path';
 import session from 'express-session';
+import connectPgSimple from 'connect-pg-simple';
+import { pool } from './db/pool.js';
 import { passport, addCurrentUserToLocals } from './config/passport.js';
 import { signUpRouter } from './routes/signUpRouter.js';
 import { loginRouter } from './routes/loginRouter.js';
@@ -17,9 +19,19 @@ app.use(express.urlencoded({ extended: true }));
 // serve assets from public folder
 const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath));
-
-// passport
-app.use(session({ secret: 'cats', resave: false, saveUninitialized: false }));
+// session store in DB
+const pgSession = connectPgSimple(session);
+app.use(session({ 
+    store: new pgSession({
+        pool: pool,
+        createTableIfMissing: true,
+    }),
+    secret: process.env.SECRET, 
+    resave: false, 
+    saveUninitialized: false,
+    cookie: { maxAge: 5 * 60 * 1000 } // 5 minutes
+}));
+// passport setup
 app.use(passport.session());
 app.use(addCurrentUserToLocals);
 

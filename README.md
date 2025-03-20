@@ -11,6 +11,3 @@
 -   passport-local
 -   connect-pg-simple
 -   bcryptjs
-
-todo:
-- connect-pg-simple
