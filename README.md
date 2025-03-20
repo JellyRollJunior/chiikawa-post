@@ -13,5 +13,4 @@
 -   bcryptjs
 
 todo:
-- login form validation
 - connect-pg-simple
