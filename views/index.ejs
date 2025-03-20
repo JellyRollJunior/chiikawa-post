@@ -1,5 +1,16 @@
-<h1>hi</h1>
-<% if (locals.currentUser) {%>
-<h1>WELCOME BACK <%= currentUser.firstname %></h1>
-<a href="/log-out">LOG OUT</a>
-<% } %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>yippeee</h1>
+    <% if (locals.currentUser) {%>
+      <h1>WELCOME BACK <%= currentUser.username %></h1>
+      <a href="/log-out">LOG OUT</a>
+    <% } else { %>
+      <a href="/login">LOG IN</a>
+    <%}%>
+  </body>
+</html>
