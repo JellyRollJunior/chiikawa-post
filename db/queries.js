@@ -73,6 +73,15 @@ const getMemberMessages = databaseHandler(async () => {
     return rows;
 }, 'Error retrieving messages');
 
+const insertMessage = databaseHandler(async (id, title, message) => {
+    const query = `
+        INSERT INTO messages (author_id, title, message)
+        VALUES ($1, $2, $3)
+    `;
+    const { rows } = await pool.query(query, [id, title, message]);
+    console.log(rows);
+}, 'Error inserting message');
+
 export {
     getUserByUsername,
     getUserById,
@@ -80,4 +89,5 @@ export {
     updateMembership,
     getMessages,
     getMemberMessages,
+    insertMessage,
 };
