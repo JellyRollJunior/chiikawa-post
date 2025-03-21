@@ -5,6 +5,7 @@ import session from 'express-session';
 import connectPgSimple from 'connect-pg-simple';
 import { pool } from './db/pool.js';
 import { passport, addCurrentUserToLocals } from './config/passport.js';
+import { indexRouter } from './routes/indexRouter.js';
 import { signUpRouter } from './routes/signUpRouter.js';
 import { loginRouter } from './routes/loginRouter.js';
 dotenv.config();
@@ -36,9 +37,7 @@ app.use(passport.session());
 app.use(addCurrentUserToLocals);
 
 // routes
-app.get('/', (req, res) => {
-    res.render('index');
-});
+app.use('/', indexRouter);
 app.use('/sign-up', signUpRouter);
 app.use('/login', loginRouter);
 

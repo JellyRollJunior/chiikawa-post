@@ -11,3 +11,6 @@
 -   passport-local
 -   connect-pg-simple
 -   bcryptjs
+
+todo:
+- show messages
