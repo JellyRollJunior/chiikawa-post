@@ -8,6 +8,7 @@ import { passport, addCurrentUserToLocals } from './config/passport.js';
 import { indexRouter } from './routes/indexRouter.js';
 import { signUpRouter } from './routes/signUpRouter.js';
 import { loginRouter } from './routes/loginRouter.js';
+import { memberRouter } from './routes/memberRouter.js';
 dotenv.config();
 
 const app = express();
@@ -39,7 +40,8 @@ app.use(addCurrentUserToLocals);
 // routes
 app.use('/', indexRouter);
 app.use('/sign-up', signUpRouter);
-app.use('/login', loginRouter);
+app.use('/log-in', loginRouter);
+app.use('/member', memberRouter)
 
 // init server
 const PORT = 3000;
