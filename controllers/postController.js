@@ -13,4 +13,12 @@ const postPost = async (req, res) => {
     return res.redirect('/');
 }
 
-export { getPostForm, postPost };
+const deletePost = async (req, res) => {
+    const { postId } = req.params;
+    if (postId) {
+        await db.deleteMessage(postId);
+    }
+    res.redirect('/');
+}
+
+export { getPostForm, postPost, deletePost };
