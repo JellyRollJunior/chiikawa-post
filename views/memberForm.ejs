@@ -6,6 +6,7 @@
     <title>Membership Form</title>
   </head>
   <body>
+    <%- include('./partials/error.ejs') %>
     <form action="/member" method="POST">
       <label for="code">Membership code</label>
       <input type="password" name="code" id="code" />
