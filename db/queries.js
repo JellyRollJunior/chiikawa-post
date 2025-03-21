@@ -61,46 +61,46 @@ const updateToAdmin = databaseHandler(async (id) => {
     console.log(`${rowCount} row(s) updated`);
 }, 'Error updating to admin');
 
-const getMessages = databaseHandler(async () => {
+const getPosts = databaseHandler(async () => {
     const query = `
         SELECT title, message
-        FROM messages
+        FROM posts
         ORDER BY send_time DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);
     return rows;
-}, 'Error retrieving messages');
+}, 'Error retrieving posts');
 
-const getMemberMessages = databaseHandler(async () => {
+const getMemberPosts = databaseHandler(async () => {
     const query = `
-        SELECT title, message, send_time, firstname, lastname, messages.id
-        FROM messages
-        JOIN users ON messages.author_id = users.id
+        SELECT title, message, send_time, firstname, lastname, posts.id
+        FROM posts
+        JOIN users ON posts.author_id = users.id
         ORDER BY send_time DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);
     return rows;
-}, 'Error retrieving messages');
+}, 'Error retrieving posts');
 
-const insertMessage = databaseHandler(async (id, title, message) => {
+const insertPost = databaseHandler(async (id, title, message) => {
     const query = `
-        INSERT INTO messages (author_id, title, message)
+        INSERT INTO posts (author_id, title, message)
         VALUES ($1, $2, $3)
     `;
     const { rows } = await pool.query(query, [id, title, message]);
     console.log(rows);
-}, 'Error inserting message');
+}, 'Error inserting post');
 
-const deleteMessage = databaseHandler(async (id) => {
+const deletePost = databaseHandler(async (id) => {
     const query = `
-        DELETE FROM messages
+        DELETE FROM posts
         WHERE id = $1
     `;
     const { rowCount } = await pool.query(query, [id]);
     console.log(`${rowCount} row(s) deleted`);
-}, 'Error deleting message');
+}, 'Error deleting post');
 
 export {
     getUserByUsername,
@@ -108,8 +108,8 @@ export {
     insertuser,
     updateToMember,
     updateToAdmin,
-    getMessages,
-    getMemberMessages,
-    insertMessage,
-    deleteMessage,
+    getPosts,
+    getMemberPosts,
+    insertPost,
+    deletePost,
 };

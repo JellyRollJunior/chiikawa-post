@@ -19,4 +19,3 @@ later:
 - obscenity filter
 - chiikawa pictures
 - display account status to use -> admin / member / etc
-- changes messages to posts

@@ -1,6 +1,6 @@
 -- RESET TABLES
 DROP TABLE IF EXISTS users CASCADE;
-DROP TABLE IF EXISTS messages CASCADE;
+DROP TABLE IF EXISTS posts CASCADE;
 
 -- CREATE TABLES
 CREATE TABLE IF NOT EXISTS users (
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
     is_admin boolean DEFAULT false
 );
 
-CREATE TABLE IF NOT EXISTS messages (
+CREATE TABLE IF NOT EXISTS posts (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     title VARCHAR (64),
     message text,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS messages (
 INSERT INTO users (firstname, lastname, username, password) VALUES 
     ('chiikawa', 'chiikawa', 'chiikawa', 'chiikawa');
 
--- INSERT MESSAGES
-INSERT INTO messages (title, message, author_id) VALUES 
+-- INSERT POSTS
+INSERT INTO posts (title, message, author_id) VALUES 
     ('I love to sing!', 'Yan papa rurura rurura!', 1),
     ('Weeding is difficult work!', 'Nsho! Nsho! Huuuuuu~~~. Waaaaaaaai!', 1);
