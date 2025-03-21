@@ -67,6 +67,7 @@ const getMemberMessages = databaseHandler(async () => {
         SELECT title, message, send_time, firstname, lastname
         FROM messages
         JOIN users ON messages.author_id = users.id
+        ORDER BY send_time DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);
