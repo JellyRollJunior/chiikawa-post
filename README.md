@@ -11,6 +11,3 @@
 -   passport-local
 -   connect-pg-simple
 -   bcryptjs
-
-todo:
-- add message meta info to message

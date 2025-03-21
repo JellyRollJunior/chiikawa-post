@@ -12,6 +12,17 @@
     <% } else { %>
       <a href="/login">LOG IN</a>
     <% } %>
-    <%- include('./partials/messages.ejs') %>
+    <ul>
+      <% if (locals.messages) { %>
+        <% messages.forEach((message) => { %>
+          <li>
+            <h3>Title: <%= message.title %></h3>
+            <p>Message: <%= message.message %></p>
+            <h4>Author ID: <%= message.author_id %></h4>
+            <h5><%= message.send_time %></h5>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
   </body>
 </html>
