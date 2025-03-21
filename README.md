@@ -13,11 +13,9 @@
 -   bcryptjs
 
 todo:
-- add id to message queries
-- implement delete JS
 
 later:
-- error handler middleware
+- error handler middleware -> redirect to error page on error
 - obscenity filter
 - chiikawa pictures
 - display account status to use -> admin / member / etc
