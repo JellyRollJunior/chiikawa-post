@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Chiikawa Post</title>
   </head>
   <body>
     <h1>yippeee</h1>
@@ -12,9 +12,11 @@
       <% if (!locals.currentUser.is_member) { %>
         <a href="/member">MEMBERSHIP</a>
       <% } %>
+      <a href="/post"><button>Make a new post!</button></a>
     <% } else { %>
       <a href="/sign-up">Sign Up</a>
       <a href="/log-in">LOG IN</a>
+      <h2>Log in to make a post!</h2>
     <% } %>
     <ul>
       <% if (locals.messages) { %>
