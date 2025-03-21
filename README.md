@@ -13,8 +13,6 @@
 -   bcryptjs
 
 todo:
-- message post
-
 
 later:
 - error handler middleware
