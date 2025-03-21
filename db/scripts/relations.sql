@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS messages (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     title VARCHAR (64),
     message text,
-    timestamp DATE DEFAULT CURRENT_DATE, 
+    send_time timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
     author_id INTEGER REFERENCES users (id) ON DELETE CASCADE
 );
 

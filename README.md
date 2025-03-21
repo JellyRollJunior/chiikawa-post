@@ -13,5 +13,4 @@
 -   bcryptjs
 
 todo:
-- add message date AND TIME
-- order messages by date time
+- add message meta info to message

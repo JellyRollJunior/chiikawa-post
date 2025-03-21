@@ -37,7 +37,7 @@ const getMessages = databaseHandler(async () => {
     const query = `
         SELECT *
         FROM messages
-        ORDER BY id DESC
+        ORDER BY send_time DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);
