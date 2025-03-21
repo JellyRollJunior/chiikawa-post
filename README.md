@@ -13,7 +13,6 @@
 -   bcryptjs
 
 todo:
-- create admin page
 - create admin update query
 - rename code to membership code
 

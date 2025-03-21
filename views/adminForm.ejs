@@ -6,6 +6,15 @@
     <title>Admin Form</title>
   </head>
   <body>
-    <h1>Hi i am the admin form page</h1>
+    <% if (!locals.currentUser || !locals.currentUser.is_member) { %>
+     <h2>Only members can apply to be an Admin!</h2>
+    <% } else { %>
+      <form action="/admin" method="POST">
+        <label for="adminCode">Admin code</label>
+        <input type="password" name="adminCode" id="adminCode">
+        <button>Submit</button>
+      </form>
+    <% } %>
+    <a href="/">Return to homepage</a>
   </body>
 </html>
