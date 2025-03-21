@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS users (
     lastname VARCHAR (32),
     username VARCHAR (32),
     password VARCHAR (64),
-    isMember boolean DEFAULT false,
-    isAdmin boolean DEFAULT false
+    is_member boolean DEFAULT false,
+    is_admin boolean DEFAULT false
 );
 
 CREATE TABLE IF NOT EXISTS messages (

@@ -44,7 +44,7 @@ const insertuser = databaseHandler(
 const updateMembership = databaseHandler(async (id) => {
     const query = `
         UPDATE users
-        SET isMember = true
+        SET is_member = true
         WHERE id = ($1)
     `;
     const { rowCount } = await pool.query(query, [id]);

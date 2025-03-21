@@ -9,7 +9,9 @@
     <% if (locals.currentUser) {%>
       <h1>WELCOME BACK <%= currentUser.username %></h1>
       <a href="/log-out">LOG OUT</a>
-      <a href="/member">MEMBERSHIP</a>
+      <% if (!locals.currentUser.is_member) { %>
+        <a href="/member">MEMBERSHIP</a>
+      <% } %>
     <% } else { %>
       <a href="/sign-up">Sign Up</a>
       <a href="/log-in">LOG IN</a>
