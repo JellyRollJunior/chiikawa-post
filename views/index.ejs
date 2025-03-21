@@ -29,7 +29,7 @@
             <h4>Author: <%= message.firstname %> <%= message.lastname %></h4>
             <h5>Time: <%= message.send_time %></h5>
             <% if (locals.currentUser && locals.currentUser.is_admin) { %>
-              <button>Delete</button>
+              <button class="delete-btn" data-id=<%= message.id %>>Delete</button>
             <% } %>
           </li>
         <% }) %>

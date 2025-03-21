@@ -13,7 +13,7 @@
 -   bcryptjs
 
 todo:
-- show delete buttons to admins
+- add id to message queries
 - implement delete JS
 
 later:

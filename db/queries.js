@@ -74,7 +74,7 @@ const getMessages = databaseHandler(async () => {
 
 const getMemberMessages = databaseHandler(async () => {
     const query = `
-        SELECT title, message, send_time, firstname, lastname
+        SELECT title, message, send_time, firstname, lastname, messages.id
         FROM messages
         JOIN users ON messages.author_id = users.id
         ORDER BY send_time DESC
@@ -98,7 +98,7 @@ const deleteMessage = databaseHandler(async (id) => {
         DELETE FROM messages
         WHERE id = $1
     `;
-    const { rowCount } = pool.query(query, [id]);
+    const { rowCount } = await pool.query(query, [id]);
     console.log(`${rowCount} row(s) deleted`);
 }, 'Error deleting message');
 
