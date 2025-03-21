@@ -13,10 +13,7 @@
 -   bcryptjs
 
 todo:
-- message form route
-- message form
-    - display error if not logged in
-    - if logged in, show form
+- message post
 
 
 later:
