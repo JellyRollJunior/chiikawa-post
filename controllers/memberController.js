@@ -9,7 +9,7 @@ const getMember = (req, res) => {
 const postMember = async (req, res) => {
     if (req.isAuthenticated()) {
         if (req.body.code == process.env.CODE) {
-            await db.updateMembership(req.user.id);
+            await db.updateToMember(req.user.id);
             return res.redirect('/');
         }
         return res.render('memberForm', { errors: [{ msg: 'Incorrect membership code' }]});
