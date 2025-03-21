@@ -13,6 +13,9 @@
 -   bcryptjs
 
 todo:
+- implement delete query
+- show delete buttons to admins
+- implement delete JS
 
 later:
 - error handler middleware

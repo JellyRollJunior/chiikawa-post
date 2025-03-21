@@ -51,6 +51,16 @@ const updateToMember = databaseHandler(async (id) => {
     console.log(`${rowCount} row(s) updated`);
 });
 
+const updateToAdmin = databaseHandler(async (id) => {
+    const query = `
+        UPDATE users
+        SET is_admin = true
+        WHERE id = ($1)
+    `;
+    const { rowCount } = await pool.query(query, [id]);
+    console.log(`${rowCount} row(s) updated`);
+}, 'Error updating to admin');
+
 const getMessages = databaseHandler(async () => {
     const query = `
         SELECT title, message
@@ -83,15 +93,14 @@ const insertMessage = databaseHandler(async (id, title, message) => {
     console.log(rows);
 }, 'Error inserting message');
 
-const updateToAdmin = databaseHandler(async (id) => {
+const deleteMessage = databaseHandler(async (id) => {
     const query = `
-        UPDATE users
-        SET is_admin = true
-        WHERE id = ($1)
+        DELETE FROM messages
+        WHERE id = $1
     `;
-    const { rowCount } = await pool.query(query, [id]);
-    console.log(`${rowCount} row(s) updated`);
-}, 'Error updating to admin');
+    const { rowCount } = pool.query(query, [id]);
+    console.log(`${rowCount} row(s) deleted`);
+}, 'Error deleting message');
 
 export {
     getUserByUsername,
@@ -102,4 +111,5 @@ export {
     getMessages,
     getMemberMessages,
     insertMessage,
+    deleteMessage,
 };
