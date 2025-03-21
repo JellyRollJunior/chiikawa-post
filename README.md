@@ -13,4 +13,5 @@
 -   bcryptjs
 
 todo:
-- show messages
+- add message date AND TIME
+- order messages by date time

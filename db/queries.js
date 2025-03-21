@@ -33,4 +33,15 @@ const insertuser = databaseHandler(async (firstname, lastname, username, passwor
     console.log(`${rows[0].username} inserted into database`);
 }, 'Error inserting user');
 
-export { getUserByUsername, getUserById, insertuser };
+const getMessages = databaseHandler(async () => {
+    const query = `
+        SELECT *
+        FROM messages
+        ORDER BY id DESC
+    `;
+    const { rows } = await pool.query(query);
+    console.log(rows);
+    return rows;
+}, 'Error retrieving messages');
+
+export { getUserByUsername, getUserById, insertuser, getMessages };
