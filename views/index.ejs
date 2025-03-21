@@ -11,6 +11,8 @@
       <a href="/log-out">LOG OUT</a>
       <% if (!locals.currentUser.is_member) { %>
         <a href="/member">MEMBERSHIP</a>
+      <% } else if (!locals.currentUser.is_admin) { %>
+        <a href="/admin">Admin</a>
       <% } %>
       <a href="/post"><button>Make a new post!</button></a>
     <% } else { %>

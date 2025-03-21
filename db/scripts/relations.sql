@@ -22,8 +22,8 @@ CREATE TABLE IF NOT EXISTS messages (
 );
 
 -- INSERT USERS
-INSERT INTO users (firstname, lastname, username, password, isAdmin) VALUES 
-    ('chiikawa', 'chiikawa', 'chiikawa', 'chiikawa', TRUE);
+INSERT INTO users (firstname, lastname, username, password) VALUES 
+    ('chiikawa', 'chiikawa', 'chiikawa', 'chiikawa');
 
 -- INSERT MESSAGES
 INSERT INTO messages (title, message, author_id) VALUES 
