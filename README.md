@@ -13,12 +13,6 @@
 -   bcryptjs
 
 todo
-- display already a member message if user is a member
-
 -> make different query to db based on membership status of current user
 - retrieve message metadata if member
 - do not retrieve message metadata if not member
-
-
-others:
-- signup link
