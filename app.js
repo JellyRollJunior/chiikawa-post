@@ -9,6 +9,7 @@ import { indexRouter } from './routes/indexRouter.js';
 import { signUpRouter } from './routes/signUpRouter.js';
 import { loginRouter } from './routes/loginRouter.js';
 import { memberRouter } from './routes/memberRouter.js';
+import { postRouter } from './routes/postRouter.js';
 dotenv.config();
 
 const app = express();
@@ -41,7 +42,8 @@ app.use(addCurrentUserToLocals);
 app.use('/', indexRouter);
 app.use('/sign-up', signUpRouter);
 app.use('/log-in', loginRouter);
-app.use('/member', memberRouter)
+app.use('/member', memberRouter);
+app.use('/post', postRouter);
 
 // init server
 const PORT = 3000;

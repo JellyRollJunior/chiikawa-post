@@ -15,4 +15,9 @@
 todo:
 - message form route
 - message form
-- message add queries
+    - display error if not logged in
+    - if logged in, show form
+
+
+later:
+- error handler middleware
