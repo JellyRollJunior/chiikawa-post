@@ -7,7 +7,9 @@
   </head>
   <body>
     <% if (!locals.currentUser || !locals.currentUser.is_member) { %>
-     <h2>Only members can apply to be an Admin!</h2>
+      <h2>Only members can apply to be an Admin!</h2>
+    <% } else if (locals.currentUser.is_admin) { %>
+      <h2>You are already an admin!</h2>
     <% } else { %>
       <%- include('partials/error.ejs') %>
       <form action="/admin" method="POST">
