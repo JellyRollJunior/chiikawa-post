@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
     lastname VARCHAR (32),
     username VARCHAR (32),
     password VARCHAR (64),
+    isMember boolean DEFAULT false,
     isAdmin boolean DEFAULT false
 );
 

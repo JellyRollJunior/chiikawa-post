@@ -15,7 +15,6 @@
 todo
 - membership form
 - membership update query
-- add isMember to user column
 
 -> make different query to db based on membership status of current user
 - retrieve message metadata if member

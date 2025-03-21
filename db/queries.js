@@ -23,15 +23,33 @@ const getUserById = databaseHandler(async (id) => {
     return rows[0];
 }, 'Error retrieving user');
 
-const insertuser = databaseHandler(async (firstname, lastname, username, password) => {
+const insertuser = databaseHandler(
+    async (firstname, lastname, username, password) => {
+        const query = `
+            INSERT INTO users (firstname, lastname, username, password)
+            VALUES ($1, $2, $3, $4)
+            RETURNING *
+        `;
+        const { rows } = await pool.query(query, [
+            firstname,
+            lastname,
+            username,
+            password,
+        ]);
+        console.log(`${rows[0].username} inserted into database`);
+    },
+    'Error inserting user'
+);
+
+const updateMembership = databaseHandler(async (id) => {
     const query = `
-        INSERT INTO users (firstname, lastname, username, password)
-        VALUES ($1, $2, $3, $4)
-        RETURNING *
+        UPDATE users
+        SET isMember = true
+        WHERE id = ($1)
     `;
-    const { rows } = await pool.query(query, [firstname, lastname, username, password]);
-    console.log(`${rows[0].username} inserted into database`);
-}, 'Error inserting user');
+    const { rowCount } = await pool.query(query, [id]);
+    console.log(`${rowCount} row(s) updated`);
+});
 
 const getMessages = databaseHandler(async () => {
     const query = `
@@ -44,4 +62,10 @@ const getMessages = databaseHandler(async () => {
     return rows;
 }, 'Error retrieving messages');
 
-export { getUserByUsername, getUserById, insertuser, getMessages };
+export {
+    getUserByUsername,
+    getUserById,
+    insertuser,
+    updateMembership,
+    getMessages,
+};
