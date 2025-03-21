@@ -62,10 +62,22 @@ const getMessages = databaseHandler(async () => {
     return rows;
 }, 'Error retrieving messages');
 
+const getMemberMessages = databaseHandler(async () => {
+    const query = `
+        SELECT title, message, send_time, firstname, lastname
+        FROM messages
+        JOIN users ON messages.author_id = users.id
+    `;
+    const { rows } = await pool.query(query);
+    console.log(rows);
+    return rows;
+}, 'Error retrieving messages');
+
 export {
     getUserByUsername,
     getUserById,
     insertuser,
     updateMembership,
     getMessages,
+    getMemberMessages,
 };
