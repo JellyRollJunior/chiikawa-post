@@ -13,9 +13,9 @@
 -   bcryptjs
 
 todo:
-- create admin update query
 - rename code to membership code
-
+- you are already admin message
+- refactor member post code
 
 later:
 - error handler middleware
