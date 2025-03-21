@@ -53,7 +53,7 @@ const updateMembership = databaseHandler(async (id) => {
 
 const getMessages = databaseHandler(async () => {
     const query = `
-        SELECT *
+        SELECT title, message
         FROM messages
         ORDER BY send_time DESC
     `;
