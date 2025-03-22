@@ -13,6 +13,10 @@
 -   bcryptjs
 
 todo:
+- get images
+- add image store to db for each message
+- display image on message
+- message form select image
 
 later:
 - error handler middleware -> redirect to error page on error

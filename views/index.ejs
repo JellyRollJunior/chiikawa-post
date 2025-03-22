@@ -29,6 +29,7 @@
             <p>Message: <%= message.message %></p>
             <h4>Author: <%= message.firstname %> <%= message.lastname %></h4>
             <h5>Time: <%= message.send_time %></h5>
+            <img src='/assets/postImages/1-chiikawa.png'>
             <% if (locals.currentUser && locals.currentUser.is_admin) { %>
               <form action="/post/delete/<%= message.id %>" method="POST">
                 <button >Delete</button>
