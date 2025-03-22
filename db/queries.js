@@ -104,6 +104,16 @@ const deletePost = databaseHandler(async (id) => {
     console.log(`${rowCount} row(s) deleted`);
 }, 'Error deleting post');
 
+const getImages = databaseHandler(async () => {
+    const query = `
+        SELECT id, image_name
+        FROM images
+    `;
+    const { rows } = await pool.query(query);
+    console.log(rows);
+    return rows;
+}, 'Error retrieving image data');
+
 export {
     getUserByUsername,
     getUserById,
@@ -114,4 +124,5 @@ export {
     getMemberPosts,
     insertPost,
     deletePost,
+    getImages,
 };

@@ -14,7 +14,7 @@
 
 todo:
 - message form select image
-- change db to image src and add image name
+- retrieve image data query
 
 later:
 - error handler middleware -> redirect to error page on error
