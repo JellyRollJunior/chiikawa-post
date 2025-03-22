@@ -63,8 +63,9 @@ const updateToAdmin = databaseHandler(async (id) => {
 
 const getPosts = databaseHandler(async () => {
     const query = `
-        SELECT title, message
+        SELECT title, message, images.image_name
         FROM posts
+        JOIN images ON posts.image_id = images.id
         ORDER BY send_time DESC
     `;
     const { rows } = await pool.query(query);
@@ -74,9 +75,10 @@ const getPosts = databaseHandler(async () => {
 
 const getMemberPosts = databaseHandler(async () => {
     const query = `
-        SELECT title, message, send_time, firstname, lastname, posts.id
+        SELECT title, message, send_time, firstname, lastname, posts.id, images.image_name
         FROM posts
         JOIN users ON posts.author_id = users.id
+        JOIN images ON posts.image_id = images.id
         ORDER BY send_time DESC
     `;
     const { rows } = await pool.query(query);

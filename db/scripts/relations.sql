@@ -20,11 +20,11 @@ INSERT INTO users (firstname, lastname, username, password) VALUES
 
 CREATE TABLE IF NOT EXISTS images (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    img_name VARCHAR (64)
+    image_name VARCHAR (64)
 );
 
 -- INSERT IMAGES
-INSERT INTO images (img_name) VALUES 
+INSERT INTO images (image_name) VALUES 
     ('1-chiikawa.png'),
     ('2-hachiware.png'),
     ('3-usagi.png'),
