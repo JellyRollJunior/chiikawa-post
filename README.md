@@ -13,10 +13,8 @@
 -   bcryptjs
 
 todo:
-- get images
-- add image store to db for each message
-- display image on message
 - message form select image
+- change db to image src and add image name
 
 later:
 - error handler middleware -> redirect to error page on error

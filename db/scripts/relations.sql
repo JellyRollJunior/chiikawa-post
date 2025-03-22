@@ -20,21 +20,22 @@ INSERT INTO users (firstname, lastname, username, password) VALUES
 
 CREATE TABLE IF NOT EXISTS images (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    image_name VARCHAR (64)
+    image_name VARCHAR (64),
+    image_src VARCHAR (64)
 );
 
 -- INSERT IMAGES
-INSERT INTO images (image_name) VALUES 
-    ('1-chiikawa.png'),
-    ('2-hachiware.png'),
-    ('3-usagi.png'),
-    ('4-momonga.png'),
-    ('5-rakko.png'),
-    ('6-kurimanju.png'),
-    ('7-shisa.png'),
-    ('8-kani.png'),
-    ('9-pouchette-no-yoroi-san.png'),
-    ('10-trio.png');
+INSERT INTO images (image_name, image_src) VALUES 
+    ('Chiikawa', '1-chiikawa.png'),
+    ('Hachiware', '2-hachiware.png'),
+    ('Usagi', '3-usagi.png'),
+    ('Momonga', '4-momonga.png'),
+    ('Rakko', '5-rakko.png'),
+    ('Kurimanju', '6-kurimanju.png'),
+    ('Shisa', '7-shisa.png'),
+    ('Kani', '8-kani.png'),
+    ('Pouchette no yoroi san', '9-pouchette-no-yoroi-san.png'),
+    ('Chiikawa trio', '10-trio.png');
 
 CREATE TABLE IF NOT EXISTS posts (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
