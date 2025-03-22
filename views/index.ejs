@@ -27,11 +27,11 @@
       <% if (locals.messages) { %>
         <% messages.forEach((message) => { %>
           <li class="card">
+            <img src='/assets/postImages/<%= message.image_src %>'>
             <h3>Title: <%= message.title %></h3>
             <p>Message: <%= message.message %></p>
             <h4>Author: <%= message.firstname %> <%= message.lastname %></h4>
             <h5>Time: <%= message.send_time %></h5>
-            <img src='/assets/postImages/<%= message.image_src %>'>
             <% if (locals.currentUser && locals.currentUser.is_admin) { %>
               <form action="/post/delete/<%= message.id %>" method="POST">
                 <button >Delete</button>
