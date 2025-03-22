@@ -13,6 +13,15 @@
 -   bcryptjs
 
 todo:
+- style index
+    - make nav section
+    - make title
+    - make hero
+    - make message card
+      - card image styling
+      - card background color
+      - text placement
+- style forms
 
 later:
 - error handler middleware -> redirect to error page on error
@@ -20,3 +29,5 @@ later:
 - display account status to use -> admin / member / etc
 - validate codes and messages
 - image select display - radio buttons
+- STYLING crying emoji
+- footer
