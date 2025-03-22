@@ -2,7 +2,15 @@ html {
   --pink: #f9c5ce;
   --accent-pink: #f4859b;
   --white: hsl(350.4, 80.65%, 93.92%);
-  background-color: var(--pink);
+  --blue: #e5f3fd;
+  --darker-blue: #d1e5f4;
+  background: repeating-linear-gradient(
+    to right,
+    var(--darker-blue),
+    var(--darker-blue) 15px,
+    var(--blue) 15px,
+    var(--blue) 30px
+  );
 }
 
 ul {
@@ -19,6 +27,7 @@ ul {
   align-items: center;
   padding: 0 7px 8px 7px;
   background-color: var(--accent-pink);
+  border: 2px solid var(--blue);
   border-radius: 16px;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
@@ -47,7 +56,7 @@ ul {
   margin-top: 6px;
   padding: 3px 6px;
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--pink);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
