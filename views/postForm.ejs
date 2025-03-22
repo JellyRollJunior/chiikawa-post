@@ -13,6 +13,14 @@
         <input type="text" name="title" id="title">
         <label for="message">Message</label>
         <input type="text" name="message" id="message">
+        <% if (locals.images) { %>
+          <label for="imageId">Image</label>
+          <select name="imageId" id="imageId" value="10">
+            <% images.forEach((image) => { %>
+              <option value=<%= image.id %>><%= image.image_name %></option>
+            <% }); %>
+          </select>
+        <% } %>
         <button>Submit Post</button>
       </form>
     <% } else { %>

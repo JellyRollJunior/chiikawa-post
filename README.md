@@ -13,12 +13,10 @@
 -   bcryptjs
 
 todo:
-- message form select image
-- retrieve image data query
 
 later:
 - error handler middleware -> redirect to error page on error
 - obscenity filter
-- chiikawa pictures
 - display account status to use -> admin / member / etc
 - validate codes and messages
+- image select display - radio buttons

@@ -1,14 +1,16 @@
 import * as db from '../db/queries.js';
 
-const getPostForm = (req, res) => {
-    res.render('postForm');
+const getPostForm = async (req, res) => {
+    const images = await db.getImages();
+    res.render('postForm', { images });
 };
 
 const postPost = async (req, res) => {
     if (req.isAuthenticated()) {
         const title = req.body.title;
         const message = req.body.message;
-        await db.insertPost(req.user.id, title, message);
+        const imageId = req.body.imageId;
+        await db.insertPost(req.user.id, title, message, imageId);
     }
     return res.redirect('/');
 }

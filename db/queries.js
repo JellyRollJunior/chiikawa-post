@@ -86,12 +86,12 @@ const getMemberPosts = databaseHandler(async () => {
     return rows;
 }, 'Error retrieving posts');
 
-const insertPost = databaseHandler(async (id, title, message) => {
+const insertPost = databaseHandler(async (id, title, message, image_id = 10) => {
     const query = `
-        INSERT INTO posts (author_id, title, message)
-        VALUES ($1, $2, $3)
+        INSERT INTO posts (author_id, title, message, image_id)
+        VALUES ($1, $2, $3, $4)
     `;
-    const { rows } = await pool.query(query, [id, title, message]);
+    const { rows } = await pool.query(query, [id, title, message, image_id]);
     console.log(rows);
 }, 'Error inserting post');
 
