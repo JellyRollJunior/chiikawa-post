@@ -14,9 +14,6 @@
 
 todo:
 - style index
-    - make nav section
-        - nav styling
-        - nav background stripes?
     - make title
     - make hero
     - header background + section
