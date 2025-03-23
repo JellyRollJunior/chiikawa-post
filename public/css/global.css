@@ -14,11 +14,26 @@ html {
   font-size: 16px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 7px 8px 7px;
+  background-color: var(--accent-pink);
+  border: 2px solid var(--blue);
+  border-radius: 16px;
+  box-shadow: 0 5px 10px rgba(112, 115, 134, 0.05),
+    0 15px 40px rgba(109, 115, 131, 0.2);
+}
+
+/* Header styles */
 header {
-  padding-bottom: 12px;
+  padding-bottom: 8px;
   background-color: var(--white);
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
 h1,
@@ -46,24 +61,26 @@ nav {
   margin-top: 10px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 7px 8px 7px;
+/* Button styles */
+button {
+  padding: 3px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary-button {
+  background-color: var(--pink);
+  border: 3px solid var(--accent-pink);
+  transition: background-color 0.1s ease-in;
+}
+
+.primary-button:hover {
   background-color: var(--accent-pink);
-  border: 2px solid var(--blue);
-  border-radius: 16px;
-  box-shadow: 0 5px 10px rgba(67, 69, 81, 0.05),
-    0 15px 40px rgba(71, 75, 86, 0.2);
 }
 
 .secondary-button {
-  padding: 1px 6px;
   background-color: var(--blue);
   border: 2px solid var(--accent-blue);
-  border-radius: 8px;
-  font-weight: bold;
   transition: background-color 0.1s ease-in;
 }
 

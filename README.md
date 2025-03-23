@@ -15,7 +15,6 @@
 todo:
 - style index
     - make nav section
-        - nav button styling
         - nav styling
     - make title
     - make hero
