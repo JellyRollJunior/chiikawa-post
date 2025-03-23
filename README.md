@@ -18,7 +18,6 @@ todo:
     - make title
     - make hero
     - make message card
-      - delete button
       - timestamp text display
 - style forms
 

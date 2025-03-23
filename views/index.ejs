@@ -45,7 +45,7 @@
               <% } %>
               <% if (locals.currentUser && locals.currentUser.is_admin) { %>
                 <form action="/post/delete/<%= post.id %>" method="POST">
-                  <button>Delete</button>
+                  <button class="delete-btn secondary-button">Delete</button>
                 </form>
               <% } %>
             </div>

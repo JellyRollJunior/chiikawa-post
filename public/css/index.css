@@ -34,9 +34,10 @@
 }
 
 .post-data {
+  display: relative;
   width: 100%;
   margin-top: 6px;
-  padding: 3px 6px;
+  padding: 5px 8px;
   background-color: var(--pink);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -55,4 +56,11 @@ h5 {
   font-weight: normal;
   color: rgb(48, 47, 47);
   font-size: 0.9rem;
+}
+
+.delete-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: 3px;
+  margin-bottom: 2px;
 }
