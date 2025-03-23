@@ -28,3 +28,4 @@ later:
 - STYLING crying emoji
 - footer
 - font
+- logout
