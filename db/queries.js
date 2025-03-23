@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { databaseHandler } from './databaseHandler.js';
 import { pool } from './pool.js';
 
@@ -66,7 +67,7 @@ const getPosts = databaseHandler(async () => {
         SELECT title, message, images.image_src
         FROM posts
         JOIN images ON posts.image_id = images.id
-        ORDER BY send_time DESC
+        ORDER BY creation_time DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);
@@ -79,7 +80,7 @@ const getMemberPosts = databaseHandler(async () => {
         FROM posts
         JOIN users ON posts.author_id = users.id
         JOIN images ON posts.image_id = images.id
-        ORDER BY send_time DESC
+        ORDER BY creation_time DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);
@@ -87,11 +88,12 @@ const getMemberPosts = databaseHandler(async () => {
 }, 'Error retrieving posts');
 
 const insertPost = databaseHandler(async (id, title, message, image_id = 10) => {
+    const timestamp = format(new Date(), 'LLL do, yyyy h:maaa');
     const query = `
-        INSERT INTO posts (author_id, title, message, image_id)
-        VALUES ($1, $2, $3, $4)
+        INSERT INTO posts (author_id, title, message, image_id, send_time)
+        VALUES ($1, $2, $3, $4, $5)
     `;
-    const { rows } = await pool.query(query, [id, title, message, image_id]);
+    const { rows } = await pool.query(query, [id, title, message, image_id, timestamp]);
     console.log(rows);
 }, 'Error inserting post');
 

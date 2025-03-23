@@ -36,13 +36,8 @@
             <div class="post-data">
               <h3 class="post-title"><%= post.title %></h3>
               <p><%= post.message %></p>
-              <% if (post.firstname) { %>
-                <h4>From: <%= post.firstname %> <%= post.lastname %></h4>
-                <h5>Time: <%= post.send_time %></h5>
-              <% } else { %>
-                <h4>From: Anonymous little creature</h4>
-                <h5>Time: Yaha Yaha</h5>
-              <% } %>
+                <h4>From: <%= post.firstname ? post.firstname : 'Anonymous mob creature'%> <%= post.lastname %></h4>
+                <h5>Time: <%= post.send_time ? post.send_time : 'ウーラヤハヤハウーラ' %></h5>
               <% if (locals.currentUser && locals.currentUser.is_admin) { %>
                 <form action="/post/delete/<%= post.id %>" method="POST">
                   <button class="delete-btn secondary-button">Delete</button>

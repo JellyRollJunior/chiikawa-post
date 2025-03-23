@@ -17,8 +17,6 @@ todo:
     - make nav section
     - make title
     - make hero
-    - make message card
-      - timestamp text display
 - style forms
 
 later:

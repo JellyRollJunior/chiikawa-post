@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS posts (
     title VARCHAR (64),
     message text,
     image_id INTEGER REFERENCES images (id) DEFAULT 10,
-    send_time timestamp WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+    send_time VARCHAR (64) DEFAULT 'May 24th, 1997 5:30pm',
+    creation_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     author_id INTEGER REFERENCES users (id) ON DELETE CASCADE
 );
 
