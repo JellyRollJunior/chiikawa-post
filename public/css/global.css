@@ -3,19 +3,47 @@ html {
   --accent-pink: #f4859b;
   --white: hsl(350.4, 80.65%, 93.92%);
   --blue: #e5f3fd;
-  --darker-blue: #d1e5f4;
+  --accent-blue: #d1e5f4;
   background: repeating-linear-gradient(
     to right,
-    var(--darker-blue),
-    var(--darker-blue) 15px,
+    var(--accent-blue),
+    var(--accent-blue) 15px,
     var(--blue) 15px,
     var(--blue) 30px
   );
   font-size: 16px;
 }
 
-h1 {
+header {
+  padding-bottom: 12px;
+  background-color: var(--white);
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+h1,
+h2 {
   text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon,
+.post-icon {
+  --size: 50px;
+  height: var(--size);
+  width: var(--size);
+  align-self: center;
+  justify-self: center;
+}
+
+.post-icon {
+  margin-top: 10px;
 }
 
 .card {
@@ -33,12 +61,12 @@ h1 {
 .secondary-button {
   padding: 1px 6px;
   background-color: var(--blue);
-  border: 2px solid var(--darker-blue);
+  border: 2px solid var(--accent-blue);
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.1s ease-in;
 }
 
 .secondary-button:hover {
-  background-color: var(--darker-blue);
+  background-color: var(--accent-blue);
 }

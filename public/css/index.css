@@ -24,15 +24,6 @@
   border-radius: 50%;
 }
 
-.post-icon {
-  --size: 50px;
-  height: var(--size);
-  width: var(--size);
-  align-self: center;
-  justify-self: center;
-  margin-top: 10px;
-}
-
 .post-data {
   display: relative;
   width: 100%;
