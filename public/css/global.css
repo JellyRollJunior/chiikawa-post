@@ -13,14 +13,6 @@ html {
   );
 }
 
-.post-holder {
-  display: flex;
-  flex-direction: column;
-  gap: 52px;
-  margin-top: 36px;
-  padding: 0 6px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -31,41 +23,4 @@ html {
   border-radius: 16px;
   box-shadow: 0 5px 10px rgba(67, 69, 81, 0.05),
     0 15px 40px rgba(71, 75, 86, 0.2);
-}
-
-.post-header {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 90px 1fr;
-  width: 100%;
-}
-
-.post-main-icon {
-  --size: 90px;
-  height: var(--size);
-  width: var(--size);
-  margin-top: -24px;
-  background-color: white;
-  outline: 10px solid var(--accent-pink);
-  border: 5px solid var(--white);
-  border-radius: 50%;
-}
-
-.post-icon {
-  --size: 50px;
-  height: var(--size);
-  width: var(--size);
-  align-self: center;
-  justify-self: center;
-  margin-top: 10px;
-}
-
-.post-data {
-  width: 100%;
-  margin-top: 6px;
-  padding: 3px 6px;
-  text-align: center;
-  background-color: var(--pink);
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
 }
