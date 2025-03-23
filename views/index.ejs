@@ -10,22 +10,24 @@
   </head>
   <body>
     <header>
-      <h1>Chiikawa Post</h1>
-      <nav>
-        <img class="header-icon" src="/assets/postIcons/chiikawa-icon.png">
-        <% if (locals.currentUser) {%>
-          <a href="/log-out">LOG OUT</a>
-          <% if (!locals.currentUser.is_member) { %>
-            <a href="/member">MEMBERSHIP</a>
-          <% } else if (!locals.currentUser.is_admin) { %>
-            <a href="/admin">Admin</a>
+      <img class="header-icon" src="/assets/postIcons/chiikawa-icon.png">
+      <div>
+        <h1>Chiikawa Post</h1>
+        <nav>
+          <% if (locals.currentUser) {%>
+            <a href="/log-out">LOG OUT</a>
+            <% if (!locals.currentUser.is_member) { %>
+              <a href="/member">MEMBERSHIP</a>
+            <% } else if (!locals.currentUser.is_admin) { %>
+              <a href="/admin">Admin</a>
+            <% } %>
+          <% } else { %>
+            <a href="/sign-up"><button class="primary-button">Sign Up</button></a>
+            <a href="/log-in"><button class="primary-button">Log In</button></a>
           <% } %>
-        <% } else { %>
-          <a href="/sign-up"><button class="primary-button">Sign Up</button></a>
-          <a href="/log-in"><button class="primary-button">Log In</button></a>
-        <% } %>
-        <img class="header-icon" src="/assets/postIcons/hachiware-icon.png">
-      </nav>
+        </nav>
+      </div>
+      <img class="header-icon" src="/assets/postIcons/hachiware-icon.png">
     </header>
     <main>
       <% if (locals.currentUser) {%>
