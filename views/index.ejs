@@ -32,7 +32,7 @@
     <main>
       <% if (locals.currentUser) {%>
         <h2>Welcome back <%= currentUser.firstname %>!</h2>
-        <a href="/post"><button>Make a new post!</button></a>
+        <a href="/post"><button class="primary-button new-post-button">Make a new post!</button></a>
       <% } else { %>
         <h2>Log in to make a post!</h2>
       <% } %>

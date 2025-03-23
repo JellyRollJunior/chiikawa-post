@@ -14,12 +14,8 @@
 
 todo:
 - style index
-    - make title
-    - make hero
-    - header background + section
-    - primary button styling
-    - new post button styling
     - login to make a post styling
+    - style all nav button
 - style forms
 
 later:

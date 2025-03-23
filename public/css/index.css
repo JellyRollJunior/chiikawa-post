@@ -1,9 +1,19 @@
+h2 {
+  margin: 16px 0 12px 0;
+}
+
+.new-post-button {
+  display: block;
+  margin: 12px auto 12px auto;
+  padding: 6px 36px;
+}
+
+/* Posts */
 .post-holder {
   display: flex;
   flex-direction: column;
   gap: 52px;
-  margin-top: 36px;
-  padding: 0 6px;
+  padding: 36px 6px 0 6px;
 }
 
 .post-header {
