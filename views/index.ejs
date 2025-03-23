@@ -39,7 +39,7 @@
               <h5>Time: <%= message.send_time %></h5>
               <% if (locals.currentUser && locals.currentUser.is_admin) { %>
                 <form action="/post/delete/<%= message.id %>" method="POST">
-                  <button >Delete</button>
+                  <button>Delete</button>
                 </form>
               <% } %>
             </div>
