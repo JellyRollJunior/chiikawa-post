@@ -23,22 +23,22 @@
       <a href="/log-in">LOG IN</a>
       <h2>Log in to make a post!</h2>
     <% } %>
-    <ul>
-      <% if (locals.messages) { %>
-        <% messages.forEach((message) => { %>
+    <ul class="post-holder">
+      <% if (locals.posts) { %>
+        <% posts.forEach((post) => { %>
           <li class="card">
             <div class="post-header">
               <img class="post-icon icon-left" src="">
-              <img class="post-main-icon" src='/assets/postImages/<%= message.image_src %>'>
+              <img class="post-main-icon" src='/assets/postImages/<%= post.image_src %>'>
               <img class="post-icon icon-right" src="">
             </div>
             <div class="post-data">
-              <h3><%= message.title %></h3>
-              <p><%= message.message %></p>
-              <h4>From: <%= message.firstname %> <%= message.lastname %></h4>
-              <h5>Time: <%= message.send_time %></h5>
+              <h3><%= post.title %></h3>
+              <p><%= post.message %></p>
+              <h4>From: <%= post.firstname %> <%= post.lastname %></h4>
+              <h5>Time: <%= post.send_time %></h5>
               <% if (locals.currentUser && locals.currentUser.is_admin) { %>
-                <form action="/post/delete/<%= message.id %>" method="POST">
+                <form action="/post/delete/<%= post.id %>" method="POST">
                   <button>Delete</button>
                 </form>
               <% } %>
