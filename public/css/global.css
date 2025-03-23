@@ -11,6 +11,7 @@ html {
     var(--blue) 15px,
     var(--blue) 30px
   );
+  font-size: 16px;
 }
 
 .card {
