@@ -19,6 +19,8 @@ todo:
     - make hero
     - make message card
       - text placement
+      - delete button
+      - timestamp text display
 - style forms
 
 later:
@@ -29,3 +31,4 @@ later:
 - image select display - radio buttons
 - STYLING crying emoji
 - footer
+- font
