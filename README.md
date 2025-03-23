@@ -18,8 +18,6 @@ todo:
     - make title
     - make hero
     - make message card
-      - card image styling
-      - card background color
       - text placement
 - style forms
 
