@@ -111,7 +111,7 @@ nav {
 }
 
 /* Form styles */
-form {
+form.card {
   margin: 54px 6px 0 6px;
 }
 
@@ -139,7 +139,7 @@ form input {
   width: 100%;
 }
 
-form button {
+form.card button {
   display: block;
   width: 100%;
   margin: 12px 0 6px 0;
