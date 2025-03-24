@@ -51,7 +51,7 @@ a {
   border-radius: 50%;
 }
 
-.card-data {
+.card-content {
   display: relative;
   width: 100%;
   margin-top: 6px;
@@ -108,6 +108,12 @@ nav {
   align-self: center;
   justify-self: center;
   margin-top: 10px;
+}
+
+/* Form styles */
+form {
+  display: block;
+  margin: 54px 6px 0 6px;
 }
 
 /* Button styles */

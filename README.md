@@ -15,6 +15,7 @@
 todo:
 - style forms
 - extract header
+- style errors
 
 later:
 - error handler middleware -> redirect to error page on error
