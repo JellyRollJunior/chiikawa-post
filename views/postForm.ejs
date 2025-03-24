@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/postForm.css">
+    <script src="/scripts/postForm.js" defer></script>
     <title>Create Post</title>
   </head>
   <body>
@@ -20,7 +21,7 @@
           <label for="message">Message</label>
           <textarea name="message" id="message"></textarea>
           <% if (locals.images) { %>
-            <legend>Post Companion</legend>
+            <legend>Post Companion (<span class="legend-anchor"><img src="/assets/postIcons/usagi-icon.png" alt="" class="selected-icon"></span> selected)</legend>
             <fieldset>
               <% images.forEach((image) => { %>
                 <div class="image-square">

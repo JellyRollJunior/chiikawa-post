@@ -10,6 +10,7 @@ fieldset {
 }
 
 .image-square {
+  position: relative;
   padding: 5px;
   border-bottom: var(--border-thickness) solid var(--border-color);
   border-right: var(--border-thickness) solid var(--border-color);
@@ -22,4 +23,27 @@ fieldset {
 fieldset div.image-square > label {
   margin-top: 0;
   text-align: center;
+}
+
+.legend-anchor {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 25px;
+}
+
+.selected-icon {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+}
+
+legend .selected-icon {
+  top: 0px;
+  left: 2px;
+}
+
+fieldset .selected-icon {
+  top: 5px;
+  right: 5px;
 }

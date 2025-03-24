@@ -14,8 +14,6 @@
 
 todo
 - style text area
-- image select display - radio buttons
-    - select image
 
 later:
 - error handler middleware -> redirect to error page on error
@@ -26,4 +24,4 @@ later:
 - logout
 - sign up form -> if logged in already show error
     - instead of rendering errors -> just redirect to homepage...
-- post errors
+- post validation + errors
