@@ -3,21 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <script src="/scripts/index.js" defer></script>
     <title>Membership Form</title>
   </head>
   <body>
-    <% if (locals.currentUser) { %>
-      <% if (locals.currentUser.is_member) { %>
-        <h2>You are already a member!</h2>
-      <% } else { %>
-        <%- include('./partials/error.ejs') %>
-        <form action="/member" method="POST">
-          <label for="code">Membership code</label>
-          <input type="password" name="code" id="code" />
-          <button>Submit</button>
-        </form>
-      <% } %>
-    <% } %>
-    <a href="/">Return to homepage</a>
+    <%- include('./partials/header.ejs') %>
+    <form action="/member" method="POST" class="card">
+      <div class="card-header">
+        <img class="card-icon icon-left" src="">
+        <img class="card-main-icon" src='/assets/postImages/1-chiikawa.png'>
+        <img class="card-icon icon-right" src="">
+      </div>
+      <div class="card-content">
+        <% if (locals.currentUser) { %>
+          <% if (locals.currentUser.is_member) { %>
+            <h2>You are already a member!</h2>
+          <% } else { %>
+            <h1 class="card-title">Membership</h1>
+            <%- include('./partials/error.ejs') %>
+            <label for="code">Membership code</label>
+            <input type="password" name="code" id="code" />
+            <button class="secondary-button">Submit</button>
+          <% } %>
+        <% } else { %>
+          <h2 class="card-title">Please login to apply for membership</h2>
+        <% } %>
+      </div>
+      <a href="/"><button type="button" class="secondary-button">Return to homepage</button></a>
+    </form>
   </body>
 </html>

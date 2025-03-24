@@ -13,10 +13,10 @@
 -   bcryptjs
 
 todo:
-- style member form
 - style post form
 - style admin form
 - rename index.js
+- new post button padding
 
 later:
 - error handler middleware -> redirect to error page on error
