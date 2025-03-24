@@ -12,17 +12,19 @@
 -   connect-pg-simple
 -   bcryptjs
 
-todo:
-
+todo
+- style text area
+- image select display - radio buttons
+    - create image boxes
+    - create radio buttons
 
 later:
 - error handler middleware -> redirect to error page on error
 - obscenity filter
 - validate codes and messages
-- image select display - radio buttons
-- STYLING crying emoji
 - footer
 - font
 - logout
 - sign up form -> if logged in already show error
+    - instead of rendering errors -> just redirect to homepage...
 - post errors

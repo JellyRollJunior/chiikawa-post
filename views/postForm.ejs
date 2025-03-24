@@ -17,16 +17,22 @@
           <label for="title">Title</label>
           <input type="text" name="title" id="title">
           <label for="message">Message</label>
-          <input type="text" name="message" id="message">
+          <textarea name="message" id="message"></textarea>
           <% if (locals.images) { %>
-            <label for="imageId">Image</label>
-            <select name="imageId" id="imageId" value="10">
+            <fieldset>
+              <legend>Post Companion</legend>
               <% images.forEach((image) => { %>
-                <option value=<%= image.id %>><%= image.image_name %></option>
+                <div>
+                  <label for=<%= image.id %>>
+                    <img src="/assets/postImages/<%= image.image_src %>" alt="">
+                    <%= image.image_name %>
+                  </label>
+                  <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %>>
+                </div>
               <% }); %>
-            </select>
-          <button class="secondary-button">Submit Post</button>
+            </fieldset>
           <% } %>
+          <button class="secondary-button">Submit Post</button>
         <% } else { %>
           <h2 class="card-title">Log in to create a post silly! How did you get here?</h2>
         <% } %>

@@ -108,7 +108,7 @@ const deletePost = databaseHandler(async (id) => {
 
 const getImages = databaseHandler(async () => {
     const query = `
-        SELECT id, image_name
+        SELECT *
         FROM images
     `;
     const { rows } = await pool.query(query);
