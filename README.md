@@ -15,12 +15,6 @@
 todo:
 - style post form
   - style inputs
-- new post button padding
-- style return buttons
-- add return buttons to add form
-- return button hover anim change
-
-- make return to homepage button primary button -> outside card-content
 
 later:
 - error handler middleware -> redirect to error page on error
