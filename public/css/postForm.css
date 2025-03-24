@@ -1,0 +1,16 @@
+fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+fieldset label {
+  text-align: center;
+}
+
+.image-square input {
+  display: none;
+}
+
+input:checked + label {
+  border: 2px solid black;
+}

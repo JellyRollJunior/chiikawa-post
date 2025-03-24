@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/postForm.css">
     <title>Create Post</title>
   </head>
   <body>
@@ -22,12 +23,12 @@
             <fieldset>
               <legend>Post Companion</legend>
               <% images.forEach((image) => { %>
-                <div>
+                <div class="image-square">
+                  <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %>>
                   <label for=<%= image.id %>>
                     <img src="/assets/postImages/<%= image.image_src %>" alt="">
                     <%= image.image_name %>
                   </label>
-                  <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %>>
                 </div>
               <% }); %>
             </fieldset>

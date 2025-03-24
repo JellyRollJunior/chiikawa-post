@@ -15,8 +15,8 @@
 todo
 - style text area
 - image select display - radio buttons
-    - create image boxes
-    - create radio buttons
+    - style fieldset
+    - style border select
 
 later:
 - error handler middleware -> redirect to error page on error
