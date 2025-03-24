@@ -14,7 +14,6 @@
 
 todo:
 - style post form
-- rename index.js
 - new post button padding
 - extract card-header
 - style return buttons
