@@ -79,7 +79,7 @@ nav {
 
 /* Button styles */
 button {
-  padding: 3px 12px;
+  padding: 5px 14px 3px 14px;
   border-radius: 8px;
   font-weight: bold;
 }
