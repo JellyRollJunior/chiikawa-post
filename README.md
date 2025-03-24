@@ -13,7 +13,6 @@
 -   bcryptjs
 
 todo:
-- style errors
 
 later:
 - error handler middleware -> redirect to error page on error
