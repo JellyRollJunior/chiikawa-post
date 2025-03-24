@@ -123,19 +123,21 @@ form .errors {
 }
 
 form .card-content {
-  padding: 6px 16px 16px 16px;
+  padding: 6px 16px 6px 16px;
 }
 
 form h1 {
   margin-bottom: 12px;
 }
 
-form label {
+form.card label,
+form.card .return-button {
   display: block;
   margin-top: 6px;
 }
 
-form input {
+form.card input,
+form.card a {
   width: 100%;
 }
 
