@@ -13,8 +13,7 @@
 -   bcryptjs
 
 todo:
-- style post form
-  - style inputs
+
 
 later:
 - error handler middleware -> redirect to error page on error

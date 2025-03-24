@@ -143,6 +143,11 @@ form.card a {
   width: 100%;
 }
 
+form.card input {
+  border-radius: 5px;
+  border-style: none;
+}
+
 form.card button {
   display: block;
   width: 100%;
