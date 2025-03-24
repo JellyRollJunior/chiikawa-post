@@ -13,6 +13,10 @@
 -   bcryptjs
 
 todo:
+- style member form
+- style post form
+- style admin form
+- rename index.js
 
 later:
 - error handler middleware -> redirect to error page on error

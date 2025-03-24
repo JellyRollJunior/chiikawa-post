@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <script src="/scripts/index.js" defer></script>
     <title>Login</title>
   </head>
   <body>
-    <%- include('./partials/error.ejs') %>
-    <form action="" method="POST">
-      <label for="username">Username</label>
-      <input type="text" name="username" id="username" maxlength="32" required>
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" maxlength="32" required>
-      <button>Submit</button>
+    <%- include('./partials/header.ejs') %>
+    <form action="/log-in" method="POST" class="card">
+      <div class="card-header">
+        <img class="card-icon icon-left" src="">
+        <img class="card-main-icon" src='/assets/postImages/1-chiikawa.png'>
+        <img class="card-icon icon-right" src="">
+      </div>
+      <div class="card-content">
+        <h1 class="card-title">Log In</h1>
+        <%- include('./partials/error.ejs') %>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" maxlength="32" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" maxlength="32" required>
+      </div>
+      <button class="secondary-button">Submit</button>
     </form>
   </body>
 </html>
