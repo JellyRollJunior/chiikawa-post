@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/index.css">
@@ -40,13 +41,13 @@
         <% if (locals.posts) { %>
           <% posts.forEach((post) => { %>
             <li class="card">
-              <div class="post-header">
-                <img class="post-icon icon-left" src="">
-                <img class="post-main-icon" src='/assets/postImages/<%= post.image_src %>'>
-                <img class="post-icon icon-right" src="">
+              <div class="card-header">
+                <img class="card-icon icon-left" src="">
+                <img class="card-main-icon" src='/assets/postImages/<%= post.image_src %>'>
+                <img class="card-icon icon-right" src="">
               </div>
-              <div class="post-data">
-                <h3 class="post-title"><%= post.title %></h3>
+              <div class="card-data">
+                <h3 class="card-title"><%= post.title %></h3>
                 <p><%= post.message %></p>
                   <h4>From: <%= post.firstname ? post.firstname : 'Anonymous mob creature'%> <%= post.lastname %></h4>
                   <h5>Time: <%= post.send_time ? post.send_time : 'ウーラヤハヤハウーラ' %></h5>

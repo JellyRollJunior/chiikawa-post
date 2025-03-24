@@ -20,6 +20,7 @@ a {
   text-decoration: inherit;
 }
 
+/* Card styling */
 .card {
   display: flex;
   flex-direction: column;
@@ -30,6 +31,38 @@ a {
   border-radius: 16px;
   box-shadow: 0 5px 10px rgba(112, 115, 134, 0.05),
     0 15px 40px rgba(109, 115, 131, 0.2);
+}
+
+.card-header {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 90px 1fr;
+  width: 100%;
+}
+
+.card-main-icon {
+  --size: 90px;
+  height: var(--size);
+  width: var(--size);
+  margin-top: -24px;
+  background-color: white;
+  outline: 10px solid var(--accent-pink);
+  border: 5px solid var(--white);
+  border-radius: 50%;
+}
+
+.card-data {
+  display: relative;
+  width: 100%;
+  margin-top: 6px;
+  padding: 5px 8px;
+  background-color: var(--pink);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.card-title {
+  text-align: center;
 }
 
 /* Header styles */
@@ -68,7 +101,7 @@ nav {
 }
 
 .header-icon,
-.post-icon {
+.card-icon {
   --size: 50px;
   height: var(--size);
   width: var(--size);

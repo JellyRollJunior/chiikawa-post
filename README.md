@@ -13,8 +13,8 @@
 -   bcryptjs
 
 todo:
-- style index
 - style forms
+- extract header
 
 later:
 - error handler middleware -> redirect to error page on error

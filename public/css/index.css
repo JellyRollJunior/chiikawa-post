@@ -16,38 +16,6 @@ h2 {
   padding: 36px 6px 0 6px;
 }
 
-.post-header {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 90px 1fr;
-  width: 100%;
-}
-
-.post-main-icon {
-  --size: 90px;
-  height: var(--size);
-  width: var(--size);
-  margin-top: -24px;
-  background-color: white;
-  outline: 10px solid var(--accent-pink);
-  border: 5px solid var(--white);
-  border-radius: 50%;
-}
-
-.post-data {
-  display: relative;
-  width: 100%;
-  margin-top: 6px;
-  padding: 5px 8px;
-  background-color: var(--pink);
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.post-title {
-  text-align: center;
-}
-
 h4 {
   margin-top: 8px;
 }

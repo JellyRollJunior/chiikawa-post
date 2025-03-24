@@ -9,7 +9,7 @@ const addPostIconSources = () => {
         'usagi-icon.png',
     ];
 
-    const postHeaderIcons = document.querySelectorAll('.post-icon');
+    const postHeaderIcons = document.querySelectorAll('.card-icon');
     postHeaderIcons.forEach((icon) => {
         const index = Math.floor(Math.random() * icons.length);
         icon.src = `${ICON_ROUTE_PREFIX}${icons[index]}`;

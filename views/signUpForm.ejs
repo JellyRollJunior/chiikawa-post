@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/index.css">
     <script src="/scripts/signUpForm.js" defer></script>
+    <title>Sign Up</title>
   </head>
   <body>
     <%- include('partials/error.ejs') %>
-    <form action="/sign-up" method="POST">
+    <form action="/sign-up" method="POST" class="card">
+      <div class="post-header">
+        <img class="post-icon icon-left" src="">
+        <img class="post-main-icon" src='/assets/postImages/1-chiikawa.png'>
+        <img class="post-icon icon-right" src="">
+      </div>
+      <div class="post-data">
+        <h1>Login</h1>
         <label for="firstname">First Name</label>
         <input type="text" name="firstname" id="firstname" minlength="1" maxlength="32" required>
         <label for="lastname">Last Name</label>
@@ -20,6 +30,7 @@
         <label for="confirmPassword">Confirm Password</label>
         <input type="password" name="confirmPassword" id="confirmPassword" minlength="6" maxlength="32" required>
         <button>Submit</button>
+      </div>
     </form>
   </body>
 </html>
