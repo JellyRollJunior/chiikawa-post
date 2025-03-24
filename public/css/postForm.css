@@ -1,16 +1,25 @@
 fieldset {
+  --border-color: var(--white);
+  --border-thickness: 3px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  padding: 0;
+  border: none;
+  border-top: var(--border-thickness) solid var(--border-color);
+  border-left: var(--border-thickness) solid var(--border-color);
 }
 
-fieldset label {
-  text-align: center;
+.image-square {
+  padding: 5px;
+  border-bottom: var(--border-thickness) solid var(--border-color);
+  border-right: var(--border-thickness) solid var(--border-color);
 }
 
 .image-square input {
   display: none;
 }
 
-input:checked + label {
-  border: 2px solid black;
+fieldset div.image-square > label {
+  margin-top: 0;
+  text-align: center;
 }

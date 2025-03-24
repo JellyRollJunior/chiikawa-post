@@ -34,7 +34,7 @@ INSERT INTO images (image_name, image_src) VALUES
     ('Kurimanju', '6-kurimanju.png'),
     ('Shisa', '7-shisa.png'),
     ('Kani', '8-kani.png'),
-    ('Pouchette no yoroi san', '9-pouchette-no-yoroi-san.png'),
+    ('Yoroi-san', '9-pouchette-no-yoroi-san.png'),
     ('Chiikawa trio', '10-trio.png');
 
 CREATE TABLE IF NOT EXISTS posts (
