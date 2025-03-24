@@ -14,14 +14,11 @@
 
 todo:
 - style index
-    - login to make a post styling
-    - style all nav button
 - style forms
 
 later:
 - error handler middleware -> redirect to error page on error
 - obscenity filter
-- display account status to use -> admin / member / etc
 - validate codes and messages
 - image select display - radio buttons
 - STYLING crying emoji

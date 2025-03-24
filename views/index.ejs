@@ -15,11 +15,11 @@
         <h1>Chiikawa Post</h1>
         <nav>
           <% if (locals.currentUser) {%>
-            <a href="/log-out">LOG OUT</a>
+            <a href="/log-out"><button class="primary-button">LOG OUT</button></a>
             <% if (!locals.currentUser.is_member) { %>
-              <a href="/member">MEMBERSHIP</a>
+              <a href="/member"><button class="primary-button">MEMBERSHIP</button></a>
             <% } else if (!locals.currentUser.is_admin) { %>
-              <a href="/admin">Admin</a>
+              <a href="/admin"><button class="primary-button">Admin</button></a>
             <% } %>
           <% } else { %>
             <a href="/sign-up"><button class="primary-button">Sign Up</button></a>
@@ -31,7 +31,7 @@
     </header>
     <main>
       <% if (locals.currentUser) {%>
-        <h2>Welcome back <%= currentUser.firstname %>!</h2>
+        <h2>Welcome <%= currentUser.is_admin ? 'admin' : currentUser.is_member ? 'member' : '' %>  <%= currentUser.firstname %>!</h2>
         <a href="/post"><button class="primary-button new-post-button">Make a new post!</button></a>
       <% } else { %>
         <h2>Log in to make a post!</h2>
