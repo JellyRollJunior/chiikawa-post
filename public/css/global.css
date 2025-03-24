@@ -112,8 +112,30 @@ nav {
 
 /* Form styles */
 form {
-  display: block;
   margin: 54px 6px 0 6px;
+}
+
+form .card-content {
+  padding: 6px 16px 16px 16px;
+}
+
+form h1 {
+  margin-bottom: 12px;
+}
+
+form label {
+  display: block;
+  margin-top: 6px;
+}
+
+form input {
+  width: 100%;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  margin: 12px 0 6px 0;
 }
 
 /* Button styles */

@@ -13,8 +13,6 @@
 -   bcryptjs
 
 todo:
-- style forms
-- extract header
 - style errors
 
 later:
@@ -26,3 +24,4 @@ later:
 - footer
 - font
 - logout
+- sign up form -> if logged in already show error

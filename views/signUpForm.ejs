@@ -11,7 +11,7 @@
     <title>Sign Up</title>
   </head>
   <body>
-    <%- include('partials/error.ejs') %>
+    <%- include('./partials/header.ejs') %>
     <form action="/sign-up" method="POST" class="card">
       <div class="card-header">
         <img class="card-icon icon-left" src="">
@@ -19,7 +19,8 @@
         <img class="card-icon icon-right" src="">
       </div>
       <div class="card-content">
-        <h1 class="card-title">Login</h1>
+        <h1 class="card-title">Sign up</h1>
+        <%- include('partials/error.ejs') %>
         <label for="firstname">First Name</label>
         <input type="text" name="firstname" id="firstname" minlength="1" maxlength="32" required>
         <label for="lastname">Last Name</label>
@@ -30,8 +31,8 @@
         <input type="password" name="password" id="password" minlength="6" maxlength="32" required>
         <label for="confirmPassword">Confirm Password</label>
         <input type="password" name="confirmPassword" id="confirmPassword" minlength="6" maxlength="32" required>
-        <button>Submit</button>
       </div>
+      <button class="secondary-button">Submit</button>
     </form>
   </body>
 </html>
