@@ -3,21 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <script src="/scripts/index.js" defer></script>
     <title>Admin Form</title>
   </head>
   <body>
-    <% if (!locals.currentUser || !locals.currentUser.is_member) { %>
-      <h2>Only members can apply to be an Admin!</h2>
-    <% } else if (locals.currentUser.is_admin) { %>
-      <h2>You are already an admin!</h2>
-    <% } else { %>
-      <%- include('partials/error.ejs') %>
-      <form action="/admin" method="POST">
-        <label for="adminCode">Admin code</label>
-        <input type="password" name="adminCode" id="adminCode">
-        <button>Submit</button>
-      </form>
-    <% } %>
-    <a href="/">Return to homepage</a>
+    <%- include('./partials/header.ejs') %>
+    <form action="/admin" method="POST" class="card">
+      <div class="card-header">
+        <img class="card-icon icon-left" src="">
+        <img class="card-main-icon" src='/assets/postImages/1-chiikawa.png'>
+        <img class="card-icon icon-right" src="">
+      </div>
+      <div class="card-content">
+        <% if (!locals.currentUser || !locals.currentUser.is_member) { %>
+          <h2>Only members can apply to be an Admin!</h2>
+        <% } else if (locals.currentUser.is_admin) { %>
+          <h2>You are already an admin!</h2>
+        <% } else { %>
+          <h1 class="card-title">Administrator</h1>
+          <%- include('partials/error.ejs') %>
+          <label for="adminCode">Admin code</label>
+          <input type="password" name="adminCode" id="adminCode">
+          <button class="secondary-button">Submit</button>
+        <% } %>
+      </div>
+      <a href="/"><button type="button" class="secondary-button">Return to homepage</button></a>
+    </form>
   </body>
 </html>

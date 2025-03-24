@@ -14,9 +14,11 @@
 
 todo:
 - style post form
-- style admin form
 - rename index.js
 - new post button padding
+- extract card-header
+- style return buttons
+- add return buttons to add form
 
 later:
 - error handler middleware -> redirect to error page on error
