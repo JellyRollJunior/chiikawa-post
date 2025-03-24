@@ -113,6 +113,7 @@ nav {
 /* Form styles */
 form.card {
   margin: 54px 6px 0 6px;
+  padding-bottom: 6px;
 }
 
 form .errors {
@@ -134,6 +135,7 @@ form.card label,
 form.card .return-button {
   display: block;
   margin-top: 6px;
+  margin-bottom: 0;
 }
 
 form.card input,

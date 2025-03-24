@@ -18,8 +18,6 @@ todo:
 - new post button padding
 - style return buttons
 - add return buttons to add form
-- return to homepage button margins too large vertically
-- move submit button inside card-content
 - return button hover anim change
 
 - make return to homepage button primary button -> outside card-content
