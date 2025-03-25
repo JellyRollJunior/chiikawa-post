@@ -13,18 +13,10 @@
 -   bcryptjs
 
 todo
-- membership page
-    - redirect to homepage if member
-    - redirect to homepage if admin
-    - redirect to homepage if not logged in
 - admin page
     - redirect to homepage if not member
     - redirect to homepage if admin
     - redirect to homepage if not logged in
-- login page
-    - redirect to homepage if member
-    - redirect to homepage if admin
-    - redirect to homepage if not member
 - post page
     - redirect to homepage if not logged in
 

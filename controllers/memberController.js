@@ -3,7 +3,11 @@ import * as db from '../db/queries.js';
 dotenv.config();
 
 const getMember = (req, res) => {
-    res.render('memberForm');
+    if (req.isAuthenticated() && !req.user.is_member && !req.user.is_admin) {
+        return res.render('memberForm');
+    }
+    // redirect to mainpage if user is not logged in, a member, or admin
+    res.redirect('/');
 };
 
 const postMember = async (req, res) => {

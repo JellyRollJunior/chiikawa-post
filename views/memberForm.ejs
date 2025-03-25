@@ -12,19 +12,11 @@
     <form action="/member" method="POST" class="card">
       <%- include('./partials/card-header.ejs') %>
       <div class="card-content">
-        <% if (locals.currentUser) { %>
-          <% if (locals.currentUser.is_member) { %>
-            <h2>You are already a member!</h2>
-          <% } else { %>
-            <h1 class="card-title">Membership</h1>
-            <%- include('./partials/error.ejs') %>
-            <label for="code">Membership code</label>
-            <input type="password" name="code" id="code" />
-            <button class="secondary-button">Submit</button>
-          <% } %>
-        <% } else { %>
-          <h2 class="card-title">Please login to apply for membership</h2>
-        <% } %>
+        <h1 class="card-title">Membership</h1>
+        <%- include('./partials/error.ejs') %>
+        <label for="code">Membership code</label>
+        <input type="password" name="code" id="code" />
+        <button class="secondary-button">Submit</button>
       </div>
       <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
     </form>
