@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import * as signUpController from '../controllers/signUpController.js';
 import { userValidation } from '../validations/signUpValidation.js';
+import * as signUpController from '../controllers/signUpController.js';
 
 const signUpRouter = Router();
 signUpRouter.get('/', signUpController.getSignUp);

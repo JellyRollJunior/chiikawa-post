@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import * as db from '../db/queries.js';
+import { validationResult } from 'express-validator';
 dotenv.config();
 
 const getMember = (req, res) => {
@@ -12,8 +13,9 @@ const getMember = (req, res) => {
 
 const postMember = async (req, res) => {
     if (req.isAuthenticated()) {
-        if (req.body.code != process.env.MEMBERCODE) {
-            return res.render('memberForm', { errors: [{ msg: 'Incorrect membership code' }]});
+        const errors = validationResult(req);
+        if (!errors.isEmpty() || req.body.code != process.env.MEMBERCODE) {
+            return res.status(401).render('memberForm', { errors: [{ msg: 'Incorrect membership code' }]});
         }
         await db.updateToMember(req.user.id);
     }
