@@ -3,7 +3,10 @@ import * as db from '../db/queries.js';
 dotenv.config();
 
 const getAdmin = (req, res) => {
-    res.render('adminForm');
+    if (req.isAuthenticated() && req.user.is_member) {
+        return res.render('adminForm');
+    }
+    res.redirect('/');
 };
 
 const postAdmin = async (req, res) => {
