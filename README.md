@@ -14,11 +14,10 @@
 
 todo
 - error handler middleware -> redirect to error page on error 
-    - generic error page
+    - on DB call fail => call next on thrown errors to go to error page
 
 later:
 - obscenity filter
 - footer
 - font
-
 - add mains
