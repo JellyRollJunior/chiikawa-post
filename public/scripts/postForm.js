@@ -24,8 +24,10 @@ const addSelectedImageIcon = () => {
     });
 
     // select default value
-    const defaultIcon = document.querySelector('.image-square:has(input[id="10"])');
-    defaultIcon.appendChild(createUsagiIcon());
+    const defaultSquare = document.querySelector('.image-square:has(input[id="10"])');
+    defaultSquare.appendChild(createUsagiIcon());
+    const defaultInput = document.querySelector('input[id="10"]');
+    defaultInput.setAttribute('checked', 'checked');
 };
 
 addSelectedImageIcon();
