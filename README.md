@@ -13,10 +13,6 @@
 -   bcryptjs
 
 todo
-- post page
-    - redirect to homepage if not logged in
-
-
 - error handler middleware -> redirect to error page on error
 
 later:

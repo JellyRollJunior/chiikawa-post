@@ -1,8 +1,11 @@
 import * as db from '../db/queries.js';
 
 const getPostForm = async (req, res) => {
-    const images = await db.getImages();
-    res.render('postForm', { images });
+    if (req.isAuthenticated()) {
+        const images = await db.getImages();
+        return res.render('postForm', { images });
+    }
+    res.redirect('/');
 };
 
 const postPost = async (req, res) => {
@@ -13,7 +16,7 @@ const postPost = async (req, res) => {
         await db.insertPost(req.user.id, title, message, imageId);
     }
     return res.redirect('/');
-}
+};
 
 const deletePost = async (req, res) => {
     const { postId } = req.params;
@@ -21,6 +24,6 @@ const deletePost = async (req, res) => {
         await db.deletePost(postId);
     }
     res.redirect('/');
-}
+};
 
 export { getPostForm, postPost, deletePost };

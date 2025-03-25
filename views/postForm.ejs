@@ -14,33 +14,29 @@
     <form action="/post" method="POST" class="card">
       <%- include('./partials/card-header.ejs') %>
       <div class="card-content">
-        <% if (locals.currentUser) { %>
-          <h1 class="card-title">Create post!</h1>
-          <label for="title">Title</label>
-          <input type="text" name="title" id="title">
-          <label for="message">Message</label>
-          <textarea name="message" id="message"></textarea>
-          <% if (locals.images) { %>
-            <legend>Post Companion (
-              <span class="legend-anchor">
-                <img src="/assets/postIcons/usagi-icon.png" alt="selected icon" class="selected-icon">
-              </span> selected)
-            </legend>
-            <fieldset>
-              <% images.forEach((image) => { %>
-                <div class="image-square">
-                  <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %>>
-                  <label for=<%= image.id %>>
-                    <img src="/assets/postImages/<%= image.image_src %>" alt=<%= image.image_name %>>
-                  </label>
-                </div>
-              <% }); %>
-            </fieldset>
-          <% } %>
-          <button class="secondary-button">Submit Post</button>
-        <% } else { %>
-          <h2 class="card-title">Log in to create a post silly! How did you get here?</h2>
+        <h1 class="card-title">Create post!</h1>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+        <% if (locals.images) { %>
+          <legend>Post Companion (
+            <span class="legend-anchor">
+              <img src="/assets/postIcons/usagi-icon.png" alt="selected icon" class="selected-icon">
+            </span> selected)
+          </legend>
+          <fieldset>
+            <% images.forEach((image) => { %>
+              <div class="image-square">
+                <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %>>
+                <label for=<%= image.id %>>
+                  <img src="/assets/postImages/<%= image.image_src %>" alt=<%= image.image_name %>>
+                </label>
+              </div>
+            <% }); %>
+          </fieldset>
         <% } %>
+        <button class="secondary-button">Submit Post</button>
       </div>
       <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
     </form>
