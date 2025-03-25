@@ -11,6 +11,7 @@ import { loginRouter } from './routes/loginRouter.js';
 import { memberRouter } from './routes/memberRouter.js';
 import { postRouter } from './routes/postRouter.js';
 import { adminRouter } from './routes/adminRouter.js';
+import { logoutRouter } from './routes/logoutRouter.js';
 dotenv.config();
 
 const app = express();
@@ -46,6 +47,7 @@ app.use('/log-in', loginRouter);
 app.use('/member', memberRouter);
 app.use('/post', postRouter);
 app.use('/admin', adminRouter);
+app.use('/log-out', logoutRouter);
 
 // init server
 const PORT = 3000;

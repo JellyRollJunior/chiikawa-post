@@ -13,10 +13,9 @@
 -   bcryptjs
 
 todo
-- error handler middleware -> redirect to error page on error
 
 later:
 - obscenity filter
 - footer
 - font
-- logout
+- error handler middleware -> redirect to error page on error
