@@ -3,6 +3,9 @@ import * as db from '../db/queries.js';
 import { validationResult } from 'express-validator';
 
 const getSignUp = (req, res) => {
+    if (req.isAuthenticated()) {
+        return res.redirect('/');
+    }
     res.render('signUpForm');
 };
 

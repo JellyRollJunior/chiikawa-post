@@ -2,6 +2,9 @@ import passport from 'passport';
 import { validationResult } from 'express-validator';
 
 const getLogin = (req, res) => {
+    if (req.isAuthenticated()) {
+        return res.redirect('/');
+    }
     res.render('loginForm');
 };
 
