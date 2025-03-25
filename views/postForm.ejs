@@ -21,13 +21,17 @@
           <label for="message">Message</label>
           <textarea name="message" id="message"></textarea>
           <% if (locals.images) { %>
-            <legend>Post Companion (<span class="legend-anchor"><img src="/assets/postIcons/usagi-icon.png" alt="" class="selected-icon"></span> selected)</legend>
+            <legend>Post Companion (
+              <span class="legend-anchor">
+                <img src="/assets/postIcons/usagi-icon.png" alt="selected icon" class="selected-icon">
+              </span> selected)
+            </legend>
             <fieldset>
               <% images.forEach((image) => { %>
                 <div class="image-square">
                   <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %>>
                   <label for=<%= image.id %>>
-                    <img src="/assets/postImages/<%= image.image_src %>" alt="">
+                    <img src="/assets/postImages/<%= image.image_src %>" alt=<%= image.image_name %>>
                   </label>
                 </div>
               <% }); %>
