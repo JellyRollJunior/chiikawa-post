@@ -110,50 +110,50 @@ nav {
   margin-top: 10px;
 }
 
-/* Form styles */
-form.card {
+/* Standalone card styles */
+.standalone-card.card {
   margin: 54px 6px 0 6px;
   padding-bottom: 6px;
 }
 
-form .errors {
+.standalone-card.card .errors {
   padding: 0;
   text-align: center;
   font-weight: bold;
   color: red;
 }
 
-form .card-content {
+.standalone-card.card .card-content {
   padding: 6px 16px 6px 16px;
 }
 
-form h1 {
+.standalone-card h1 {
   margin-bottom: 12px;
 }
 
-form.card label,
-form.card .return-button {
+.standalone-card.card label,
+.standalone-card.card .return-button {
   display: block;
   margin-top: 6px;
   margin-bottom: 0;
 }
 
-form.card a {
+.standalone-card.card a {
   width: 100%;
 }
 
-form.card input,
-form.card textarea {
+.standalone-card.card input,
+.standalone-card.card textarea {
   width: 100%;
   border-radius: 5px;
   border-style: none;
 }
 
-form.card textarea {
+.standalone-card.card textarea {
   min-height: 100px;
 }
 
-form.card button {
+.standalone-card.card button {
   display: block;
   width: 100%;
   margin: 12px 0 6px 0;

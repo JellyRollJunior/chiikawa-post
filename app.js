@@ -49,6 +49,18 @@ app.use('/post', postRouter);
 app.use('/admin', adminRouter);
 app.use('/log-out', logoutRouter);
 
+// 404 redirect
+app.all('*', (req, res) => {
+    const ERROR_404 = '404 page not found';
+    res.status(404).render('404', { errorMessage: ERROR_404 });
+})
+
+// default error handler
+app.use((err, req, res, next) => {
+    const errorMessage = err.message || 'Something went wrong. Please try again.';
+    res.status(500).render('404', { errorMessage });
+});
+
 // init server
 const PORT = 3000;
 app.listen(PORT, () => console.log(`listening on port: ${PORT}!`));

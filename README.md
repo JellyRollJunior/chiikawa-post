@@ -13,9 +13,12 @@
 -   bcryptjs
 
 todo
+- error handler middleware -> redirect to error page on error 
+    - generic error page
 
 later:
 - obscenity filter
 - footer
 - font
-- error handler middleware -> redirect to error page on error
+
+- add mains

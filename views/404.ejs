@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/errorPage.css" />
+    <title>404</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <section class="card standalone-card">
+        <%- include('./partials/card-header.ejs') %>
+        <div class="card-content">
+          <h2 class="card-title error-title"><%= locals.errorMessage ? locals.errorMessage : 'Something went wrong. Please try again' %></h2>
+        </div>
+        <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
+      </section>
+    </main>
+  </body>
+</html>
