@@ -1,8 +1,8 @@
 import { check } from 'express-validator';
 
-const LENGTH_ERROR = 'must be between 1 and 32 characters only';
-const ALPHA_CHINESE_ERROR = 'must use alphabetic or chinese characters only';
-const ALPHA_NUMERIC_CHINESE_BOPOMOFO_ERROR = 'must use alphabetic, number, chinese, or bopomofo characters only';
+const LENGTH_ERROR = 'must be between 1 and 32 characters';
+const ALPHA_CHINESE_ERROR = 'must use alphabetic or chinese characters';
+const ALPHA_NUMERIC_CHINESE_BOPOMOFO_ERROR = 'must use alphabetic, number, chinese, or bopomofo characters';
 const PASSWORD_LENGTH_ERROR = 'must be between 6 and 32 characters';
 const PASSWORD_MISMATCH_ERROR = 'Passwords do not match';
 

@@ -1,3 +1,4 @@
+import { validationResult } from 'express-validator';
 import * as db from '../db/queries.js';
 
 const getPostForm = async (req, res) => {
@@ -8,8 +9,13 @@ const getPostForm = async (req, res) => {
     res.redirect('/');
 };
 
-const postPost = async (req, res) => {
+const postPost = async (req, res) => { 
     if (req.isAuthenticated()) {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            const images = await db.getImages();
+            return res.status(401).render('postForm', { errors: errors.array(), images })
+        }
         const title = req.body.title;
         const message = req.body.message;
         const imageId = req.body.imageId;
