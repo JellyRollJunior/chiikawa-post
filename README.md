@@ -13,7 +13,6 @@
 -   bcryptjs
 
 todo
-- style text area
 
 later:
 - error handler middleware -> redirect to error page on error
