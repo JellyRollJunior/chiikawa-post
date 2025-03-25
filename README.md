@@ -15,10 +15,6 @@
 todo
 - error handler middleware -> redirect to error page on error
 - validate codes and messages
-    - code > 0 length cannot be empty
-        - admin code
-            - server
-            - html
     - title > 0 length max 40 char
     - text > 0 length < 300 char
         - cannot be empty

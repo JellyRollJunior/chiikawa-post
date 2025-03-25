@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import * as db from '../db/queries.js';
+import { validationResult } from 'express-validator';
 dotenv.config();
 
 const getAdmin = (req, res) => {
@@ -11,10 +12,9 @@ const getAdmin = (req, res) => {
 
 const postAdmin = async (req, res) => {
     if (req.isAuthenticated() && req.user.is_member) {
-        if (req.body.adminCode != process.env.ADMINCODE) {
-            return res.render('adminForm', {
-                errors: [{ msg: 'Incorrect admin code' }],
-            });
+        const errors = validationResult(req);
+        if (!errors.isEmpty() || req.body.code != process.env.ADMINCODE) {
+            return res.status(401).render('adminForm', { errors: [{ msg: 'Incorrect admin code' }] });
         }
         await db.updateToAdmin(req.user.id);
     }
