@@ -27,14 +27,6 @@ todo
     -> try catch
     -> on error -> call next('error data) 
 
--isAuth middleware
-    - implement isauth
-    - remove auth code controllers
-        - admin
-        - login
-        - post
-        - signup
-
 later:
 - obscenity filter
 - footer
@@ -42,4 +34,6 @@ later:
 - add mains
 - user already exists error
 
-- more auth middleswares ? is admin? is member ?
+- more auth middleswares ? 
+is admin? 
+is member && not admin?
