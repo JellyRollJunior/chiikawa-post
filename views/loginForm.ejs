@@ -9,18 +9,20 @@
   </head>
   <body>
     <%- include('./partials/header.ejs') %>
-    <form action="/log-in" method="POST" class="card standalone-card">
-      <%- include('./partials/card-header.ejs') %>
-      <div class="card-content">
-        <h1 class="card-title">Log In</h1>
-        <%- include('./partials/error.ejs') %>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" maxlength="32" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" maxlength="32" required>
-        <button class="secondary-button">Submit</button>
-      </div>
-      <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
-    </form>
+    <main>
+      <form action="/log-in" method="POST" class="card standalone-card">
+        <%- include('./partials/card-header.ejs') %>
+        <div class="card-content">
+          <h1 class="card-title">Log In</h1>
+          <%- include('./partials/error.ejs') %>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" maxlength="32" required>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" maxlength="32" required>
+          <button class="secondary-button">Submit</button>
+        </div>
+        <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
+      </form>
+    </main>
   </body>
 </html>

@@ -9,16 +9,18 @@
   </head>
   <body>
     <%- include('./partials/header.ejs') %>
-    <form action="/member" method="POST" class="card standalone-card">
-      <%- include('./partials/card-header.ejs') %>
-      <div class="card-content">
-        <h1 class="card-title">Membership</h1>
-        <%- include('./partials/error.ejs') %>
-        <label for="code">Membership code</label>
-        <input type="password" name="code" id="code" required />
-        <button class="secondary-button">Submit</button>
-      </div>
-      <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
-    </form>
+    <main>
+      <form action="/member" method="POST" class="card standalone-card">
+        <%- include('./partials/card-header.ejs') %>
+        <div class="card-content">
+          <h1 class="card-title">Membership</h1>
+          <%- include('./partials/error.ejs') %>
+          <label for="code">Membership code</label>
+          <input type="password" name="code" id="code" required />
+          <button class="secondary-button">Submit</button>
+        </div>
+        <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
+      </form>
+    </main>
   </body>
 </html>

@@ -11,35 +11,37 @@
   </head>
   <body>
     <%- include('./partials/header.ejs') %>
-    <form action="/post" method="POST" class="card standalone-card">
-      <%- include('./partials/card-header.ejs') %>
-      <div class="card-content">
-        <h1 class="card-title">Create post!</h1>
-        <%- include('./partials/error.ejs') %>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required>
-        <label for="message">Message</label>
-        <textarea name="message" id="message" maxlength="180" required></textarea>
-        <% if (locals.images) { %>
-          <legend>Post Companion (
-            <span class="legend-anchor">
-              <img src="/assets/postIcons/usagi-icon.png" alt="selected icon" class="selected-icon">
-            </span> selected)
-          </legend>
-          <fieldset>
-            <% images.forEach((image) => { %>
-              <div class="image-square">
-                <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %> required>
-                <label for=<%= image.id %>>
-                  <img src="/assets/postImages/<%= image.image_src %>" alt=<%= image.image_name %>>
-                </label>
-              </div>
-            <% }); %>
-          </fieldset>
-        <% } %>
-        <button class="secondary-button">Submit Post</button>
-      </div>
-      <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
-    </form>
+    <main>
+      <form action="/post" method="POST" class="card standalone-card">
+        <%- include('./partials/card-header.ejs') %>
+        <div class="card-content">
+          <h1 class="card-title">Create post!</h1>
+          <%- include('./partials/error.ejs') %>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" maxlength="180" required></textarea>
+          <% if (locals.images) { %>
+            <legend>Post Companion (
+              <span class="legend-anchor">
+                <img src="/assets/postIcons/usagi-icon.png" alt="selected icon" class="selected-icon">
+              </span> selected)
+            </legend>
+            <fieldset>
+              <% images.forEach((image) => { %>
+                <div class="image-square">
+                  <input type="radio" name="imageId" id=<%= image.id %> value=<%= image.id %> required>
+                  <label for=<%= image.id %>>
+                    <img src="/assets/postImages/<%= image.image_src %>" alt=<%= image.image_name %>>
+                  </label>
+                </div>
+              <% }); %>
+            </fieldset>
+          <% } %>
+          <button class="secondary-button">Submit Post</button>
+        </div>
+        <a href="/"><button type="button" class="return-button primary-button">Return to Homepage</button></a>
+      </form>
+    </main>
   </body>
 </html>

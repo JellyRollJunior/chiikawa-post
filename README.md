@@ -18,6 +18,6 @@ later:
 - obscenity filter
 - footer
 - font
-- add mains
 - user already exists error
 - populate DB sample data
+- desktop view
