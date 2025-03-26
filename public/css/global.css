@@ -15,6 +15,13 @@ html {
   font-size: 16px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
