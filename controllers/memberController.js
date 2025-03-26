@@ -4,11 +4,7 @@ import { validationResult } from 'express-validator';
 dotenv.config();
 
 const getMember = (req, res) => {
-    if (!req.user.is_member && !req.user.is_admin) {
-        return res.render('memberForm');
-    }
-    // redirect to mainpage if user is a member, or admin
-    res.redirect('/');
+    return res.render('memberForm');
 };
 
 const postMember = async (req, res, next) => {
@@ -18,6 +14,7 @@ const postMember = async (req, res, next) => {
             return res.status(401).render('memberForm', { errors: [{ msg: 'Incorrect membership code' }] });
         }
         await db.updateToMember(req.user.id);
+        res.redirect('/');
     } catch (err) {
         next(err);
     }

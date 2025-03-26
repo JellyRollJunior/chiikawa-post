@@ -19,7 +19,6 @@ const postPost = async (req, res) => {
 };
 
 const deletePost = async (req, res) => {
-    // check isAdmin
     const { postId } = req.params;
     if (postId) {
         await db.deletePost(postId);
