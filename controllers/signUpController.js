@@ -9,20 +9,24 @@ const getSignUp = (req, res) => {
     res.render('signUpForm');
 };
 
-const postSignUp = async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        res.status(401).render('signUpForm', { errors: errors.array() });
-        return;
-    }
-    const firstname = req.body.firstname;
-    const lastname = req.body.lastname;
-    const username = req.body.username;
-    const password = req.body.password;
+const postSignUp = async (req, res, next) => {
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            res.status(401).render('signUpForm', { errors: errors.array() });
+            return;
+        }
+        const firstname = req.body.firstname;
+        const lastname = req.body.lastname;
+        const username = req.body.username;
+        const password = req.body.password;
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-    await db.insertuser(firstname, lastname, username, hashedPassword);
-    res.redirect('/');
+        const hashedPassword = await bcrypt.hash(password, 10);
+        await db.insertuser(firstname, lastname, username, hashedPassword);
+        res.redirect('/');
+    } catch (err) {
+        next(err);
+    }
 };
 
 export { getSignUp, postSignUp };

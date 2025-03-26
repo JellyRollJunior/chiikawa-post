@@ -13,14 +13,6 @@
 -   bcryptjs
 
 todo
-- catch thrown db errors in controllers
-    - admin
-    - index
-    - login
-    - logout
-    - member
-    - post
-    - signup
 
 later:
 - obscenity filter
@@ -28,3 +20,4 @@ later:
 - font
 - add mains
 - user already exists error
+- populate DB sample data

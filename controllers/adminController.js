@@ -7,13 +7,17 @@ const getAdmin = (req, res) => {
     return res.render('adminForm');
 };
 
-const postAdmin = async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty() || req.body.code != process.env.ADMINCODE) {
-        return res.status(401).render('adminForm', { errors: [{ msg: 'Incorrect admin code' }] });
+const postAdmin = async (req, res, next) => {
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty() || req.body.code != process.env.ADMINCODE) {
+            return res.status(401).render('adminForm', { errors: [{ msg: 'Incorrect admin code' }] });
+        }
+        await db.updateToAdmin(req.user.id);
+        res.redirect('/');
+    } catch (err) {
+        next(err);
     }
-    await db.updateToAdmin(req.user.id);
-    res.redirect('/');
 };
 
 export { getAdmin, postAdmin };
