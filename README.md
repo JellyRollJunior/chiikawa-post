@@ -14,6 +14,13 @@
 
 todo
 - footer
+    - index
+    - admin
+    - error
+    - login
+    - member
+    - post
+    - signup
 
 later:
 - obscenity filter

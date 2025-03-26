@@ -74,9 +74,13 @@ header {
   padding: 5px 0 15px 0;
   border-top: 3px solid var(--accent-pink);
   border-bottom: calc(5px - 1px) solid var(--accent-pink);
-  outline: 2px solid var(--blue);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+footer,
+header {
+  outline: 2px solid var(--blue);
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
   background: repeating-linear-gradient(
@@ -184,4 +188,45 @@ button {
 
 .secondary-button:hover {
   background-color: var(--accent-blue);
+}
+
+/* Footer styles */
+footer {
+  margin-top: 24px;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 6px;
+
+  border-top: calc(5px - 1px) solid var(--accent-pink);
+  border-bottom: 3px solid var(--accent-pink);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.link-holder {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  padding: 6px 0 3px 0;
+}
+
+.link-holder > a {
+  --link-button-size: 32px;
+  width: var(--link-button-size);
+  height: var(--link-button-size);
+  padding: 0;
+  background-size: cover;
+}
+
+a.icon-github {
+  background-image: url(/assets/icons/icons8-github-60.png);
+}
+
+a.icon-linkedin {
+  background-image: url(/assets/icons/icons8-linkedin-60.png);
+}
+
+a.icon-instagram {
+  background-image: url(/assets/icons/icons8-instagram-60.png);
 }
