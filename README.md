@@ -13,7 +13,6 @@
 -   bcryptjs
 
 todo
-- desktop view
 
 later:
 - obscenity filter
