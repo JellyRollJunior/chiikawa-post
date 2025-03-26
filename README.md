@@ -30,7 +30,6 @@ todo
 -isAuth middleware
     - implement isauth
     - remove auth code controllers
-        - member
         - admin
         - login
         - post
@@ -42,3 +41,5 @@ later:
 - font
 - add mains
 - user already exists error
+
+- more auth middleswares ? is admin? is member ?
