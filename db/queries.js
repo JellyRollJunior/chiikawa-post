@@ -80,7 +80,7 @@ const getMemberPosts = databaseHandler(async () => {
         FROM posts
         JOIN users ON posts.author_id = users.id
         JOIN images ON posts.image_id = images.id
-        ORDER BY creation_time DESC
+        ORDER BY creation_time DESC, id DESC
     `;
     const { rows } = await pool.query(query);
     console.log(rows);

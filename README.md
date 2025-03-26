@@ -19,5 +19,5 @@ later:
 - footer
 - font
 - user already exists error
-- populate DB sample data
 - desktop view
+- post bottom padding / margin

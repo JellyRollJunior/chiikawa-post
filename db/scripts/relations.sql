@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS posts CASCADE;
 DROP TABLE IF EXISTS images CASCADE;
 
--- CREATE TABLES
+-- CREATE USERS
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     firstname VARCHAR (32),
@@ -16,8 +16,14 @@ CREATE TABLE IF NOT EXISTS users (
 
 -- INSERT USERS
 INSERT INTO users (firstname, lastname, username, password) VALUES 
-    ('chiikawa', 'chiikawa', 'chiikawa', 'chiikawa');
+    ('Chiikawa', '', 'chiikawa', 'a-really-hard-password'),
+    ('Hachiware', '', 'Hachiware', 'a-really-hard-password'),
+    ('Usagi', '', 'Usagi', 'a-really-hard-password'),
+    ('Shisa', '', 'Shisa', 'a-really-hard-password'),
+    ('Kurimanju', '', 'Kurimanju', 'a-really-hard-password'),
+    ('Kani', '', 'Kani', 'a-really-hard-password');
 
+-- CREATE IMAGES
 CREATE TABLE IF NOT EXISTS images (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     image_name VARCHAR (64),
@@ -37,6 +43,7 @@ INSERT INTO images (image_name, image_src) VALUES
     ('Yoroi-san', '9-pouchette-no-yoroi-san.png'),
     ('Chiikawa trio', '10-trio.png');
 
+-- CREATE POSTS
 CREATE TABLE IF NOT EXISTS posts (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     title VARCHAR (64),
@@ -48,6 +55,10 @@ CREATE TABLE IF NOT EXISTS posts (
 );
 
 -- INSERT POSTS
-INSERT INTO posts (title, message, author_id) VALUES 
-    ('I love to sing!', 'Yan papa rurura rurura!', 1),
-    ('Weeding is difficult work!', 'Nsho! Nsho! Huuuuuu~~~. Waaaaaaaai!', 1);
+INSERT INTO posts (title, message, author_id, image_id) VALUES 
+    ('Weeding is difficult work!', 'Nsho! Nsho! Huuuuuu~~~. Waaaaaaaai!', 1, 1),
+    ('*Eats gourmet food*', '*Sips alcohol* AHHHHHHH~~~~', 5, 6),
+    ('Hmmmmmm Yaha!', 'iiiiyaaaaaaaa urururuururururururur', 3, 3),
+    ('Rou Ramen is the best!', 'Satapanbin~~~', 4, 7),
+    ('Kani bookstore', 'Please come visit my bookstore!', 6, 8),
+    ('Saikou!', 'I bought a nice camera with the money I earned!', 2, 2);
