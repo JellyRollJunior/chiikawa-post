@@ -22,6 +22,12 @@ body {
   min-height: 100vh;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -32,6 +38,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 500px;
   padding: 0 7px 8px 7px;
   background-color: var(--accent-pink);
   border: 2px solid var(--blue);

@@ -13,9 +13,11 @@
 -   bcryptjs
 
 todo
+- desktop view
+    - make grid format on bigger screen?
+    - increase new post button size?
 
 later:
 - obscenity filter
 - font
 - user already exists error
-- desktop view
