@@ -13,11 +13,10 @@
 -   bcryptjs
 
 todo
+- footer
 
 later:
 - obscenity filter
-- footer
 - font
 - user already exists error
 - desktop view
-- post bottom padding / margin
