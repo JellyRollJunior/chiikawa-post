@@ -21,6 +21,13 @@ const postSignUp = async (req, res, next) => {
         const username = req.body.username;
         const password = req.body.password;
 
+        // check if user already exists
+        const duplicateUser = await db.getUserByUsername(username);
+        if (duplicateUser) {
+            res.status(401).render('signUpForm', { errors: [{ msg : 'Username is already in use'}] });
+            return;
+        }
+        // insert user
         const hashedPassword = await bcrypt.hash(password, 10);
         await db.insertuser(firstname, lastname, username, hashedPassword);
         res.redirect('/');

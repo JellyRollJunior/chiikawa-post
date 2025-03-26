@@ -17,4 +17,3 @@ todo
 later:
 - obscenity filter
 - font
-- user already exists error
