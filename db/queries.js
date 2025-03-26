@@ -50,7 +50,7 @@ const updateToMember = databaseHandler(async (id) => {
     `;
     const { rowCount } = await pool.query(query, [id]);
     console.log(`${rowCount} row(s) updated`);
-});
+}, 'Error modifying membership status');
 
 const updateToAdmin = databaseHandler(async (id) => {
     const query = `
