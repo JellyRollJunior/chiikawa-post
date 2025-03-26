@@ -14,8 +14,6 @@
 
 todo
 - desktop view
-    - make grid format on bigger screen?
-    - increase new post button size?
 
 later:
 - obscenity filter

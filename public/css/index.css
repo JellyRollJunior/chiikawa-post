@@ -4,6 +4,7 @@ h2 {
 
 .new-post-button {
   display: block;
+  min-width: 230px;
   margin: 12px auto 12px auto;
   padding: 7px 36px 5px 36px;
 }
@@ -33,4 +34,17 @@ h5 {
   margin-left: auto;
   margin-right: 3px;
   margin-bottom: 2px;
+}
+
+@media (min-width: 800px) {
+  .post-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+  }
+
+  .new-post-button {
+    width: 500px;
+    padding: 8px 36px 6px 36px;
+  }
 }
