@@ -15,5 +15,4 @@
 todo
 
 later:
-- obscenity filter
 - refactor
