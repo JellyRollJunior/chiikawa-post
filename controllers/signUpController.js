@@ -1,6 +1,7 @@
 import bcrypt from 'bcryptjs';
 import * as db from '../db/queries.js';
 import { validationResult } from 'express-validator';
+import { matcher } from '../utils/textCensor.js';
 
 const getSignUp = (req, res) => {
     if (req.isAuthenticated()) {
@@ -21,6 +22,21 @@ const postSignUp = async (req, res, next) => {
         const username = req.body.username;
         const password = req.body.password;
 
+        // check firstname, lastname, username for profanity
+        const profanityErrors = [];
+        if (matcher.hasMatch(firstname)) {
+            profanityErrors.push({ msg: 'Firstname cannot contain profanity'});
+        }
+        if (matcher.hasMatch(lastname)) {
+            profanityErrors.push({ msg: 'Lastname cannot contain profanity'});
+        }
+        if (matcher.hasMatch(username)) {
+            profanityErrors.push({ msg: 'Username cannot contain profanity'});
+        }
+        if (profanityErrors) {
+            res.status(401).render('signUpForm', { errors: profanityErrors });
+            return;
+        }
         // check if user already exists
         const duplicateUser = await db.getUserByUsername(username);
         if (duplicateUser) {

@@ -16,4 +16,5 @@ todo
 
 later:
 - refactor
+    - reorg app folders
 - obscenity usernames, firstnames, lastnames
