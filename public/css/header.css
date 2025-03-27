@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 0 15px 0;
+  border-top: 3px solid var(--accent-pink);
+  border-bottom: calc(5px - 1px) solid var(--accent-pink);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+header {
+  outline: 2px solid var(--blue);
+}
+
+header h1 {
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}

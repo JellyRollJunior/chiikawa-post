@@ -13,7 +13,5 @@
 -   bcryptjs
 
 todo
-
-later:
-- refactor
-    - reorg app folders
+- make card-content extent to bottom
+- readme

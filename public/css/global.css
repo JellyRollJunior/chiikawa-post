@@ -1,46 +1,3 @@
-@font-face {
-  font-family: 'Sen-ExtraBold';
-  src: url(../assets/fonts/Sen-ExtraBold.woff2);
-}
-
-@font-face {
-  font-family: 'Sen-Bold';
-  src: url(../assets/fonts/Sen-Bold.woff2);
-}
-
-@font-face {
-  font-family: 'Sen-SemiBold';
-  src: url(../assets/fonts/Sen-SemiBold.woff2);
-}
-
-@font-face {
-  font-family: 'Sen-Medium';
-  src: url(../assets/fonts/Sen-Medium.woff2);
-}
-
-@font-face {
-  font-family: 'Sen-Regular';
-  src: url(../assets/fonts/Sen-Regular.woff2);
-}
-
-h1 {
-  font-family: 'Sen-ExtraBold', sans-serif;
-}
-
-h2 {
-  font-family: 'Sen-SemiBold', sans-serif;
-}
-
-h3,
-button {
-  font-family: 'Sen-Bold', sans-serif;
-}
-
-h4,
-h5 {
-  font-family: 'Sen-Medium', sans-serif;
-}
-
 html {
   --white: hsl(350.4, 80.65%, 93.92%);
   --pale-pink: rgb(253, 247, 247);
@@ -48,6 +5,20 @@ html {
   --accent-pink: #f4859b;
   --blue: #e5f3fd;
   --accent-blue: #d1e5f4;
+}
+
+/* General styles */
+.pink-stripe-background {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--white),
+    var(--white) 15px,
+    var(--pale-pink) 15px,
+    var(--pale-pink) 30px
+  );
+}
+
+.blue-stripe-background {
   background: repeating-linear-gradient(
     to right,
     var(--accent-blue),
@@ -55,8 +26,16 @@ html {
     var(--blue) 15px,
     var(--blue) 30px
   );
-  font-family: 'Sen-Regular', sans-serif;
-  font-size: 16px;
+}
+
+.shadow {
+  box-shadow: 0 5px 10px rgba(112, 115, 134, 0.05),
+    0 15px 40px rgba(109, 115, 131, 0.2);
+}
+
+.dark-shadow {
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
 body {
@@ -88,8 +67,6 @@ a {
   background-color: var(--accent-pink);
   border: 2px solid var(--blue);
   border-radius: 16px;
-  box-shadow: 0 5px 10px rgba(112, 115, 134, 0.05),
-    0 15px 40px rgba(109, 115, 131, 0.2);
 }
 
 .card-header {
@@ -110,6 +87,15 @@ a {
   border-radius: 50%;
 }
 
+.secondary-icon {
+  --size: 50px;
+  height: var(--size);
+  width: var(--size);
+  align-self: center;
+  justify-self: center;
+  margin-top: 10px;
+}
+
 .card-content {
   display: relative;
   width: 100%;
@@ -122,55 +108,6 @@ a {
 
 .card-title {
   text-align: center;
-}
-
-/* Header styles */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 0 15px 0;
-  border-top: 3px solid var(--accent-pink);
-  border-bottom: calc(5px - 1px) solid var(--accent-pink);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-footer,
-header {
-  outline: 2px solid var(--blue);
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-    0 15px 40px rgba(166, 173, 201, 0.2);
-  background: repeating-linear-gradient(
-    45deg,
-    var(--white),
-    var(--white) 15px,
-    var(--pale-pink) 15px,
-    var(--pale-pink) 30px
-  );
-}
-
-h1,
-h2 {
-  text-align: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-.header-icon,
-.card-icon {
-  --size: 50px;
-  height: var(--size);
-  width: var(--size);
-  align-self: center;
-  justify-self: center;
-  margin-top: 10px;
 }
 
 /* Standalone card styles */
@@ -247,45 +184,4 @@ button {
 
 .secondary-button:hover {
   background-color: var(--accent-blue);
-}
-
-/* Footer styles */
-footer {
-  margin-top: 24px;
-  text-align: center;
-  background-color: #f1f1f1;
-  padding: 6px;
-
-  border-top: calc(5px - 1px) solid var(--accent-pink);
-  border-bottom: 3px solid var(--accent-pink);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.link-holder {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-
-  padding: 6px 0 3px 0;
-}
-
-.link-holder > a {
-  --link-button-size: 32px;
-  width: var(--link-button-size);
-  height: var(--link-button-size);
-  padding: 0;
-  background-size: cover;
-}
-
-a.icon-github {
-  background-image: url(/assets/icons/icons8-github-60.png);
-}
-
-a.icon-linkedin {
-  background-image: url(/assets/icons/icons8-linkedin-60.png);
-}
-
-a.icon-instagram {
-  background-image: url(/assets/icons/icons8-instagram-60.png);
 }

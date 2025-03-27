@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="blue-stripe-background">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/global.css">
     <title>Admin Form</title>
   </head>
   <body>
     <%- include('./partials/header.ejs') %>
     <main>
-      <form action="/admin" method="POST" class="card standalone-card">
+      <form action="/admin" method="POST" class="card standalone-card shadow">
         <%- include('./partials/card-header.ejs') %>
         <div class="card-content">
           <h1 class="card-title">Administrator</h1>
