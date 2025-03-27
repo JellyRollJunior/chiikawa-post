@@ -7,6 +7,8 @@ h2 {
   min-width: 230px;
   margin: 12px auto 12px auto;
   padding: 7px 36px 5px 36px;
+  font-size: 1.3rem;
+  font-family: 'Sen-ExtraBold';
 }
 
 /* Posts */

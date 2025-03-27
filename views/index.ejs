@@ -14,7 +14,7 @@
     <main>
       <% if (locals.currentUser) {%>
         <h2>Welcome <%= currentUser.is_admin ? 'admin' : currentUser.is_member ? 'member' : '' %>  <%= currentUser.firstname %>!</h2>
-        <a href="/post"><button class="primary-button new-post-button">Make a new post!</button></a>
+        <a href="/post"><button class="primary-button new-post-button">Post a message</button></a>
       <% } else { %>
         <h2>Log in to make a post!</h2>
       <% } %>
