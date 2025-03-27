@@ -1,19 +1,6 @@
 import { validationResult } from 'express-validator';
-import {
-    RegExpMatcher,
-    TextCensor,
-    englishDataset,
-    englishRecommendedTransformers,
-} from 'obscenity';
+import { textCensor, matcher } from '../utils/textCensor.js';
 import * as db from '../db/queries.js';
-
-const matcher = new RegExpMatcher({
-    ...englishDataset.build(),
-    ...englishRecommendedTransformers,
-})
-// Replace profanity with *'s
-const asteriskStrategy = (profanity) => '*'.repeat(profanity.matchLength);
-const censor = new TextCensor().setStrategy(asteriskStrategy);
 
 const getPostForm = async (req, res, next) => {
     try {
@@ -37,8 +24,8 @@ const postPost = async (req, res, next) => {
         const message = req.body.message;
         const imageId = req.body.imageId;
         // censor profanity!
-        const censoredTitle = censor.applyTo(title, matcher.getAllMatches(title));
-        const censoredMessage = censor.applyTo(message, matcher.getAllMatches(message));
+        const censoredTitle = textCensor.applyTo(title, matcher.getAllMatches(title));
+        const censoredMessage = textCensor.applyTo(message, matcher.getAllMatches(message));
         await db.insertPost(req.user.id, censoredTitle, censoredMessage, imageId);
         res.redirect('/');
     } catch (err) {

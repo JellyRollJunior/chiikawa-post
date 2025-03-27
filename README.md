@@ -16,3 +16,4 @@ todo
 
 later:
 - refactor
+- obscenity usernames, firstnames, lastnames
