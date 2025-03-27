@@ -25,8 +25,11 @@ h2 {
   justify-self: center;
 }
 
-h4 {
-  margin-top: 8px;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 h4,

@@ -7,6 +7,24 @@ html {
   --accent-blue: #d1e5f4;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 /* General styles */
 .pink-stripe-background {
   background: repeating-linear-gradient(
@@ -36,24 +54,6 @@ html {
 .dark-shadow {
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
 }
 
 /* Card styling */
@@ -98,6 +98,7 @@ a {
 
 .card-content {
   display: relative;
+  height: 100%;
   width: 100%;
   margin-top: 6px;
   padding: 5px 8px;
