@@ -39,7 +39,7 @@ const postSignUp = async (req, res, next) => {
 
         // check firstname, lastname, username for profanity
         const profanityErrors = processSignup(firstname, lastname, username);
-        if (profanityErrors) {
+        if (profanityErrors.length != 0) {
             res.status(401).render('signUpForm', { errors: profanityErrors });
             return;
         }
