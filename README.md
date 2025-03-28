@@ -13,5 +13,4 @@
 -   bcryptjs
 
 todo
-- make card-content extent to bottom
 - readme
