@@ -34,7 +34,7 @@
 -   NodeJS, Express
 -   HTML, EJS, CSS
 -   DB Hosting: neon.tech
--   Server Hosting: Render.com
+-   Server Hosting: koyeb.com
 -   Notable libraries: 
     - Passport (auth)
     - Obscenity (text censoring)
