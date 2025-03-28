@@ -6,9 +6,9 @@
     <h1>Chiikawa Post</h1>
     <nav>
       <% if (locals.currentUser) {%>
-        <a href="/log-out"><button class="primary-button">LOG OUT</button></a>
+        <a href="/log-out"><button class="primary-button">Log Out</button></a>
         <% if (!locals.currentUser.is_member) { %>
-          <a href="/member"><button class="primary-button">MEMBERSHIP</button></a>
+          <a href="/member"><button class="primary-button">Membership</button></a>
         <% } else if (!locals.currentUser.is_admin) { %>
           <a href="/admin"><button class="primary-button">Admin</button></a>
         <% } %> 
