@@ -1,7 +1,7 @@
 <h1 align="center">Chiikawa Post</h1>
 <h3 align="center">Share your world with Chiikawa by your side <a href='' target="_blank">here</a>!</h3>
 <p align="center">
-    <img align="center" width="600px" alt="" src="">
+    <img align="center" width="500px" alt="Creating post in Chiikawa Post" src="./readme/post.gif">
 </p>
 
 ### Description
@@ -34,28 +34,29 @@
 -   HTML, EJS, CSS
 -   DB Hosting: neon.tech
 -   Server Hosting: Render.com
+-   Notable libraries: 
+    - Passport (auth)
+    - Obscenity (text censoring)
+    - date-fns (date formatting)
+    - bcryptjs (hashing passwords)
 
 ## App Showcase
 
 |  Deleting post   | 
 |  --------------  | 
-| <img width="400px" alt="" src=""> | 
+| <img width="400px" alt="Deleting post in Chiikawa Post" src="./readme/delete.gif"> | 
 
-|  Signing up  | 
-|  ----------  | 
-| <img width="400px" alt="" src=""> |
+|  Signing up  |  Login  |
+|  ----------  |  -----  | 
+| <img width="200px" alt="Sign up form" src="./readme/sign-up.png"> | <img width="200px" alt="Login form" src="./readme/login.png"> |
 
-|  Member access  | 
-|  -------------  | 
-| <img width="400px" alt="" src=""> |
-
-|  Admin access  | 
-|  ------------  | 
-| <img width="400px" alt="" src=""> |
+|  Member access  |  Admin access  | 
+|  -------------  |  ------------  | 
+| <img width="200px" alt="Member form" src="./readme/member.png"> | <img width="200px" alt="Admin form" src="./readme/admin.png"> |
 
 |  Error page  | 
 |  ------------  | 
-| <img width="400px" alt="" src=""> |
+| <img width="200px" alt="Error page" src="./readme/error.png"> |
 
 ## Learning Outcomes
 
