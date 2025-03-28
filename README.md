@@ -16,6 +16,7 @@
     - upgrade your account to member then admin using secret codes
 - Four types of users: no account, Account, Member, Admin
 - A custom image selector when making post (took me a long time!)
+- Random post header icons!
 - Mega cute layout designed by ME and ALSO my love and effort!
 
 ### Account Permissions
@@ -49,15 +50,15 @@
 
 |  Signing up  |  Login  |
 |  ----------  |  -----  | 
-| <img width="200px" alt="Sign up form" src="./readme/sign-up.png"> | <img width="200px" alt="Login form" src="./readme/login.png"> |
+| <img width="250px" alt="Sign up form" src="./readme/sign-up.png"> | <img width="250px" alt="Login form" src="./readme/login.png"> |
 
 |  Member access  |  Admin access  | 
 |  -------------  |  ------------  | 
-| <img width="200px" alt="Member form" src="./readme/member.png"> | <img width="200px" alt="Admin form" src="./readme/admin.png"> |
+| <img width="250px" alt="Member form" src="./readme/member.png"> | <img width="250px" alt="Admin form" src="./readme/admin.png"> |
 
 |  Error page  | 
 |  ------------  | 
-| <img width="200px" alt="Error page" src="./readme/error.png"> |
+| <img width="250px" alt="Error page" src="./readme/error.png"> |
 
 ## Learning Outcomes
 
