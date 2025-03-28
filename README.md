@@ -7,6 +7,8 @@
 ### Description
 
 - Post your thoughts on a cute Chiikawa themed message board!
+- Member code hint: Name of the silly yellow bunny (lowercase)
+- Admin code hint: You'll never know! (for me only haha)
 
 ### Features
 
