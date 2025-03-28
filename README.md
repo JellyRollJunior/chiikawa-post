@@ -16,7 +16,7 @@
     - upgrade your account to member then admin using secret codes
 - Four types of users: no account, Account, Member, Admin
 - A custom image selector when making post (took me a long time!)
-- Mega cute layout designed by ME. AND my love and effort!
+- Mega cute layout designed by ME and ALSO my love and effort!
 
 ### Account Permissions
 
@@ -39,6 +39,7 @@
     - Obscenity (text censoring)
     - date-fns (date formatting)
     - bcryptjs (hashing passwords)
+    - express validator (validating form data)
 
 ## App Showcase
 
@@ -60,11 +61,21 @@
 
 ## Learning Outcomes
 
+- Authentication with Passport
+- Creating middlewares to perform utility functions (authenticating, checking authorization)
+    - Understanding middleware chain and flow of execution
+    - How to use next()
+- Creating error middlewares to handle errors with an error page
+- Animating my custom image selector :^)
+
 ### Retrospective (aka yapping)
+
+I finished my backend before working on front end. This approach makes me feel a bit sad because I'm looking at an ugly app for 65% of the dev process. I will do a bit of styling + backend in the future. I'm getting used to coding express apps though! The db queries were much simpler on this project. 
 
 ## Acknowledgements
 
 | Usage   |     Source     |
 | ------- | -------------- |
+| Images  | Chiikawa       | 
 | Icons   | icons8.com     |
 | Specs   | [The Odin Project](https://www.theodinproject.com/lessons/node-path-nodejs-members-only) |
