@@ -11,43 +11,45 @@
     <title>Chiikawa Post</title>
   </head>
   <body>
-    <%- include('./partials/header.ejs') %>
-    <main>
-      <% if (locals.currentUser) {%>
-        <h2>Welcome <%= currentUser.is_admin ? 'admin' : currentUser.is_member ? 'member' : '' %>  <%= currentUser.firstname %>!</h2>
-        <a href="/post"><button class="primary-button new-post-button">Post a message</button></a>
-      <% } else { %>
-        <h2>Log in to make a post!</h2>
-      <% } %>
-      <ul class="post-holder">
-        <% if (locals.posts) { %>
-          <% posts.forEach((post) => { %>
-            <li class="card shadow">
-              <div class="card-header">
-                <img class="secondary-icon icon-left" src="">
-                <img class="card-main-icon" src='/assets/postImages/<%= post.image_src %>'>
-                <img class="secondary-icon icon-right" src="">
-              </div>
-              <div class="card-content">
-                <div>
-                  <h3 class="card-title"><%= post.title %></h3>
-                  <p><%= post.message %></p>
-                </div>
-                <div>
-                  <h4>From: <%= post.firstname ? post.firstname : 'Anonymous mob creature'%> <%= post.lastname %></h4>
-                  <h5>Time: <%= post.send_time ? post.send_time : 'ウーラヤハヤハウーラ' %></h5>
-                  <% if (locals.currentUser && locals.currentUser.is_admin) { %>
-                    <form action="/post/delete/<%= post.id %>" method="POST">
-                      <button class="delete-btn secondary-button">Delete</button>
-                    </form>
-                  <% } %>
-                </div>
-              </div>
-            </li>
-          <% }) %>
+    <div>
+      <%- include('./partials/header.ejs') %>
+      <main>
+        <% if (locals.currentUser) {%>
+          <h2>Welcome <%= currentUser.is_admin ? 'admin' : currentUser.is_member ? 'member' : '' %>  <%= currentUser.firstname %>!</h2>
+          <a href="/post"><button class="primary-button new-post-button">Post a message</button></a>
+        <% } else { %>
+          <h2>Log in to make a post!</h2>
         <% } %>
-      </ul>
-    </main>
+        <ul class="post-holder">
+          <% if (locals.posts) { %>
+            <% posts.forEach((post) => { %>
+              <li class="card shadow">
+                <div class="card-header">
+                  <img class="secondary-icon icon-left" src="">
+                  <img class="card-main-icon" src='/assets/postImages/<%= post.image_src %>'>
+                  <img class="secondary-icon icon-right" src="">
+                </div>
+                <div class="card-content">
+                  <div>
+                    <h3 class="card-title"><%= post.title %></h3>
+                    <p><%= post.message %></p>
+                  </div>
+                  <div>
+                    <h4>From: <%= post.firstname ? post.firstname : 'Anonymous mob creature'%> <%= post.lastname %></h4>
+                    <h5>Time: <%= post.send_time ? post.send_time : 'ウーラヤハヤハウーラ' %></h5>
+                    <% if (locals.currentUser && locals.currentUser.is_admin) { %>
+                      <form action="/post/delete/<%= post.id %>" method="POST">
+                        <button class="delete-btn secondary-button">Delete</button>
+                      </form>
+                    <% } %>
+                  </div>
+                </div>
+              </li>
+            <% }) %>
+          <% } %>
+        </ul>
+      </main>
+    </div>
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>
