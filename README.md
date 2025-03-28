@@ -1,5 +1,5 @@
 <h1 align="center">Chiikawa Post</h1>
-<h3 align="center">Share your world with Chiikawa by your side <a href='' target="_blank">here</a>!</h3>
+<h3 align="center">Share your world with Chiikawa by your side <a href='https://chiikawapost.koyeb.app/' target="_blank">here</a>!</h3>
 <p align="center">
     <img align="center" width="500px" alt="Creating post in Chiikawa Post" src="./readme/post.gif">
 </p>
