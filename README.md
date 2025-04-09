@@ -20,6 +20,7 @@
 - A custom image selector when making post (took me a long time!)
 - Random post header icons!
 - Mega cute layout designed by ME and ALSO my love and effort!
+- Support account names in English alphabet, chinese characters, Bopomofo characters, and PinYin!
 
 ### Account Permissions
 
